@@ -7,3 +7,11 @@ export function increaseCount() {
     });
   };
 }
+
+export function decreaseCount() {
+  return (dispatch) => {
+    dispatch({
+      type: ActionTypes.DECREASE_COUNT,
+    });
+  };
+}

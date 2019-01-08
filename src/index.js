@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App/App';
-import * as serviceWorker from './utils/serviceWorker';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+import * as serviceWorker from './utils/serviceWorker';
+import App from './components/App/App';
 import rootReducer from './reducers/rootReducer';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; //eslint-disable-line
 
 const store = createStore(
   rootReducer,
@@ -18,13 +18,11 @@ const store = createStore(
 );
 
 ReactDOM.render(
- <Provider store={store}>
-  <App />
- </Provider>,
- document.getElementById('root')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root') //eslint-disable-line
 );
-
-
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
