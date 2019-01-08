@@ -14,7 +14,7 @@ class App extends Component {
           <button
             onClick={this.props.increaseCount}
           > 
-            Click to increase count 
+              Click to increase count 
           </button>
           <p> Count : {this.props.count} </p>
         </header>

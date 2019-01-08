@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
   case ActionTypes.INCREASE_COUNT:
   let tempCount = state.count;
   return Object.assign({}, state, {
-     count: tempCount +1
+    count: tempCount +1
    });
   default:
    return state
