@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { increaseCount } from '../../actions/main';
+import About from './About/About';
+import Contact from './Contact/Contact';
+// import Nav from './Nav/Nav';
+import Pebls from './Pebls/Pebls';
+import Profiles from './Profiles/Profiles';
 
 require('./App.scss');
 
@@ -13,11 +18,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1> Peblio </h1>
-          <button
-            onClick={this.props.increaseCount}
-          >
-              Click to increase count
-          </button>
+          <About />
+          <Profiles />
+          <Pebls />
+          <Contact />
           <p>
             Count :
             {this.props.count}

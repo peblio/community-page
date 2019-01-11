@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Switch, Router } from 'react-router';
+import { Route } from 'react-router-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import * as serviceWorker from './utils/serviceWorker';
 import App from './components/App/App';
+import Terms from './components/Terms/Terms';
+import Privacy from './components/Privacy/Privacy';
 import rootReducer from './reducers/rootReducer';
+import history from './utils/history';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; //eslint-disable-line
 
@@ -19,7 +24,15 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router history={history}>
+      <div>
+        <Route exact path="/" component={App} />
+        <Switch>
+          <Route path="/terms-of-use" component={Terms} />
+          <Route path="/privacy-policy" component={Privacy} />
+        </Switch>
+      </div>
+    </Router>
   </Provider>,
   document.getElementById('root') //eslint-disable-line
 );
