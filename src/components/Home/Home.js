@@ -4,21 +4,21 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { increaseCount } from '../../actions/main';
-import About from './About/About';
+import Intro from './Intro/Intro';
 import Contact from './Contact/Contact';
-// import Nav from './Nav/Nav';
+import Nav from '../Nav/Nav';
 import Pebls from './Pebls/Pebls';
 import Profiles from './Profiles/Profiles';
 
-require('./App.scss');
+require('./home.scss');
 
-class App extends Component {
+class Home extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1> Peblio </h1>
-          <About />
+          <Nav />
+          <Intro />
           <Profiles />
           <Pebls />
           <Contact />
@@ -32,7 +32,7 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
+Home.propTypes = {
   count: PropTypes.number.isRequired,
   increaseCount: PropTypes.func.isRequired
 };
@@ -46,4 +46,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   increaseCount
 }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

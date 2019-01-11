@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.nav {
+  &__container {
+    background: $black;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    padding: $small-padding;
+  }
+  &__left {
+    padding-left: $medium-padding;
+  }
+  &__menu {
+    display: flex;
+  }
+  &__item {
+    color: $white;
+    text-transform: uppercase;
+    padding: $medium-padding $large-padding ;
+    opacity: 0.7;
+    font-family: $secondary-font;
+    font-size: $small-font;
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    &:hover {
+      transition: opacity 200ms ease, transform 200ms ease, -webkit-transform 200ms ease;
+      opacity: 1;
+      transform: translate(0px, -2px);
+    }
+    &--selected {
+      color: $green;
+      opacity: 1;
+      border-bottom: 2px solid $green;
+      box-sizing: border-box;
+    }
+  }
+}
