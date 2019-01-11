@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { increaseCount } from '../../actions/main';
-import Intro from './Intro/Intro';
+import Hero from './Hero/Hero';
 import Contact from './Contact/Contact';
 import Nav from '../Nav/Nav';
 import Pebls from './Pebls/Pebls';
@@ -18,7 +18,7 @@ class Home extends Component {
       <div className="App">
         <header className="App-header">
           <Nav />
-          <Intro />
+          <Hero />
           <Profiles />
           <Pebls />
           <Contact />
