@@ -1,0 +1,85 @@
+@import '../../../styles/variables';
+
+/*TEXT*/
+.hero {
+  &__container {
+    height: auto;
+    padding-top: 150px;
+    background: $black;
+    width: 100%;
+  }
+  &__sub-container {
+
+  }
+  &__header {
+    display: block;
+    margin: 0 auto;
+    font-family: $primary-font;
+    color: $white;
+    font-size: $hero-heading-font-1;
+    line-height: $hero-heading-line-height;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  &__header-small {
+    font-size: $hero-heading-font-2;
+  }
+  &__subheader {
+    display: block;
+    width: 500px;
+    margin: $small-margin auto $large-margin;
+    font-family: $secondary-font;
+    color: $white;
+    font-size: $medium-font;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  &__button {
+    width: $button-width;
+    height: $button-height;
+    margin: 0 $medium-margin;
+    padding: $small-padding $medium-padding ;
+    border: 2px solid $green;
+    border-radius: 5px;
+    background-color: $white;
+    font-family: $primary-font;
+    color: $green;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    &:hover {
+      color: $white;
+      background-color: $green;
+    }
+  }
+  &__button-2 {
+    color: $white;
+    background-color: $green;
+    &:hover {
+      color: $green;
+      background-color: $white;
+    }
+  }
+}
+
+/* ICONS */
+.hero {
+  &__icons {
+    display: flex;
+    width: 80%;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: $large-margin*3;
+    margin-bottom: $large-margin;
+  }
+  &__icon-block {
+    width: 25%;
+  }
+  &__icon-desc{
+    font-size: 14px;
+    margin: 0 $small-margin;
+  }
+  &__icon-img {
+    height: 50px;
+  }
+}

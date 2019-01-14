@@ -15,7 +15,7 @@ class Contact extends Component {
         Contact Us
         </a>
         <div className="text-block-5">
-          <a href="https://www.peblio.co/terms-of-use" target="_blank" className="link-2">Terms of Use </a>
+          <a href="/terms-of-use" target="_blank" className="link-2">Terms of Use </a>
           {' '}
             |
           {' '}

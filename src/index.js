@@ -7,7 +7,8 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import * as serviceWorker from './utils/serviceWorker';
-import App from './components/App/App';
+import Home from './components/Home/Home';
+import About from './components/About/About';
 import Terms from './components/Terms/Terms';
 import Privacy from './components/Privacy/Privacy';
 import rootReducer from './reducers/rootReducer';
@@ -26,8 +27,9 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <div>
-        <Route exact path="/" component={App} />
+        <Route exact path="/" component={Home} />
         <Switch>
+          <Route path="/about" component={About} />
           <Route path="/terms-of-use" component={Terms} />
           <Route path="/privacy-policy" component={Privacy} />
         </Switch>

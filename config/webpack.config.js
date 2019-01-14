@@ -1,5 +1,3 @@
-
-
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
@@ -26,6 +24,7 @@ const paths = require('./paths');
 const { getIfUtils, removeEmpty } = require('webpack-config-utils');
 
 const ENVIRONMENT = process.env.ENVIRONMENT || 'local';
+const SRC_DIR = path.resolve(__dirname, 'src');
 
 const { ifNotTest } = getIfUtils(ENVIRONMENT);
 
@@ -316,6 +315,9 @@ module.exports = function (webpackEnv) {
             {
               loader: 'sass-loader',
               options: {
+                includePaths: [
+                  path.resolve(SRC_DIR, 'styles'),
+                ],
                 sourceMap: true
               }
             }
