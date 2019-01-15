@@ -18,9 +18,9 @@ class Contact extends Component {
         </a>
         <div className="contact__links">
           <a href="/terms-of-use" target="_blank" className="contact__link">Terms of Use </a>
-          {' '}
+          {'  '}
             |
-          {' '}
+          {'  '}
           <a href="/privacy-policy" target="_blank" className="contact__link">Privacy Policy</a>
         </div>
       </div>

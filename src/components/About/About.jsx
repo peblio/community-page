@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
+import Contact from '../Contact/Contact';
 
 require('./about.scss');
 
@@ -51,6 +52,7 @@ class About extends Component {
             </div>
           </div>
         </div>
+        <Contact />
       </div>
     );
   }
