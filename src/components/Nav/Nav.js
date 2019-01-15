@@ -6,6 +6,11 @@ import { bindActionCreators } from 'redux';
 require('./nav.scss');
 
 class Nav extends Component {
+  componentDidMount() {
+    const elt = document.getElementById(this.props.activeMenuItem);
+    if (elt) { elt.className += ' nav__item--selected'; }
+  }
+
   render() {
     return (
       <div className="nav__container">
@@ -16,13 +21,15 @@ class Nav extends Component {
           <nav role="navigation" className="nav__menu">
             <a
               href="/"
-              className="nav__item nav__item--selected"
+              className="nav__item"
+              id="home"
             >
               Home
             </a>
             <a
               href="/about"
               className="nav__item"
+              id="about"
             >
               About
             </a>

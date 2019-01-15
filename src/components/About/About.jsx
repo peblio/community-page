@@ -8,7 +8,9 @@ class About extends Component {
   render() {
     return (
       <div>
-        <Nav />
+        <Nav
+          activeMenuItem="about"
+        />
         <div className="about__container">
           <div className="about__sub-container about__sub-container--green">
             <div className="about__image-container">

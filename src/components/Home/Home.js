@@ -17,7 +17,9 @@ class Home extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Nav />
+          <Nav
+            activeMenuItem="home"
+          />
           <Hero />
           <Profiles />
           <Pebls />
