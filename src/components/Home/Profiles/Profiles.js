@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 class Profiles extends Component {
   render() {
     return (
-      <div className="contact__container">
+      <div className="profiles__container">
       Profiles
       </div>
     );

@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 
 import { increaseCount } from '../../actions/main';
 import Hero from './Hero/Hero';
-import Contact from './Contact/Contact';
+import Contact from '../Contact/Contact';
 import Nav from '../Nav/Nav';
 import Pebls from './Pebls/Pebls';
 import Profiles from './Profiles/Profiles';
