@@ -8,7 +8,8 @@ import Nav from '../Nav/Nav';
 class Privacy extends Component {
   render() {
     return (
-      <div className="contact__container">
+      <div>
+        <Nav />
         <div className="section">
           <h1>Privacy Policy </h1>
           <p>

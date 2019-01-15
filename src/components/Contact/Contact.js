@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+require('./contact.scss');
+
 class Contact extends Component {
   render() {
     return (
@@ -10,16 +12,16 @@ class Contact extends Component {
         <a
           href="https://demo.peblio.co/pebl/yWzLLSWLM"
           target="_blank"
-          className="submit-button w-button"
+          className="contact__button"
         >
         Contact Us
         </a>
-        <div className="text-block-5">
-          <a href="/terms-of-use" target="_blank" className="link-2">Terms of Use </a>
-          {' '}
+        <div className="contact__links">
+          <a href="/terms-of-use" target="_blank" className="contact__link">Terms of Use </a>
+          {'  '}
             |
-          {' '}
-          <a href="/privacy-policy" target="_blank" className="link">Privacy Policy</a>
+          {'  '}
+          <a href="/privacy-policy" target="_blank" className="contact__link">Privacy Policy</a>
         </div>
       </div>
     );

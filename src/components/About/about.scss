@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+
+.about {
+  &__container {
+  }
+  &__sub-container {
+    display: flex;
+    align-items: center;
+    padding: 150px 10%;
+    &--green{
+      background: $g1;
+      background-image: linear-gradient(180deg, $g1, $g2);
+    }
+    &--red {
+      background: $r1;
+      background-image: linear-gradient(180deg, $r1, $r2);
+      padding: 150px 20%;
+    }
+    &--blue {
+      background: $b1;
+      background-image: linear-gradient(180deg, $b1, $b2);
+      padding: 150px 20%;
+      flex-direction: column-reverse;
+    }
+  }
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin-left: 10%;
+    &--full{
+      margin: $large-margin 0;
+      width: 100%;
+    }
+  }
+  &__heading {
+    font-family: $primary-font;
+    color: $white;
+    font-size: $about-heading-1;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
+  }
+  &__sub-heading {
+    font-family: $primary-font;
+    color: $white;
+    font-size: $about-heading-2;
+    font-weight: 100;
+  }
+  &__image-container {
+    width: 50%;
+    &--full {
+      width: 100%;
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+}

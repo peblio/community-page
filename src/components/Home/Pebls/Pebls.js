@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 class Pebls extends Component {
   render() {
     return (
-      <div className="contact__container">
+      <div className="pebls__container">
       Pebls
       </div>
     );
