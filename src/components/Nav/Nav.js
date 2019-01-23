@@ -47,17 +47,4 @@ class Nav extends Component {
   }
 }
 
-Nav.propTypes = {
-
-};
-
-function mapStateToProps(state) {
-  return {
-
-  };
-}
-const mapDispatchToProps = dispatch => bindActionCreators({
-
-}, dispatch);
-
 export default connect(null, null)(Nav);

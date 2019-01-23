@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Nav from '../Nav/Nav';
-import Contact from '../Contact/Contact';
+import Nav from '../../components/Nav/Nav';
+import Contact from '../../components/Contact/Contact';
 
 require('./about.scss');
 

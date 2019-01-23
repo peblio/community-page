@@ -7,10 +7,13 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import * as serviceWorker from './utils/serviceWorker';
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import Terms from './components/Terms/Terms';
-import Privacy from './components/Privacy/Privacy';
+
+import About from './pages/About/About';
+import Home from './pages/Home/Home';
+import Privacy from './pages/Privacy/Privacy';
+import Studio from './pages/Studio/Studio';
+import Terms from './pages/Terms/Terms';
+
 import rootReducer from './reducers/rootReducer';
 import history from './utils/history';
 
@@ -32,6 +35,7 @@ ReactDOM.render(
           <Route path="/about" component={About} />
           <Route path="/terms-of-use" component={Terms} />
           <Route path="/privacy-policy" component={Privacy} />
+          <Route path="/studio/:tag" component={Studio} />
         </Switch>
       </div>
     </Router>
