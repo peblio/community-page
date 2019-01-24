@@ -8,10 +8,10 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import * as serviceWorker from './utils/serviceWorker';
 
-import About from './pages/About/About';
+import About from './pages/About/About.js';
 import Home from './pages/Home/Home';
 import Privacy from './pages/Privacy/Privacy';
-import Studio from './pages/Studio/Studio';
+import Studio from './pages/Studio/Studio.js';
 import Terms from './pages/Terms/Terms';
 
 import rootReducer from './reducers/rootReducer';
