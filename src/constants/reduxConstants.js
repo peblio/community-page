@@ -1,2 +1,5 @@
 export const INCREASE_COUNT = 'INCREASE_COUNT';
 export const DECREASE_COUNT = 'DECREASE_COUNT';
+
+export const SET_STUDIO_NAME = 'SET_STUDIO_NAME';
+export const SET_STUDIO_PAGES = 'SET_STUDIO_PAGES';

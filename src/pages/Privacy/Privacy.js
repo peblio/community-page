@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Nav from '../Nav/Nav';
+import Nav from '../../components/Nav/Nav';
 
 
 class Privacy extends Component {
