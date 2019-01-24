@@ -27,7 +27,6 @@ class Studio extends Component {
   }
 
   render() {
-    console.log(this.state.tag);
     return (
       <div>
         <Nav />

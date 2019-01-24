@@ -5,7 +5,6 @@ require('./pebl.scss');
 
 class Pebl extends Component {
   render() {
-    console.log(this.props);
     return (
       <div className="pebl__container">
         <h1
