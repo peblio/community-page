@@ -1,13 +1,13 @@
 import * as ActionTypes from '../constants/reduxConstants';
 
 const initialState = {
-  name: '',
+  name: 'test',
   pages: []
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case ActionTypes.SET_STUDIO_NAME:
+    case ActionTypes.SET_TAG_NAME:
       return Object.assign({}, state, {
         name: action.value
       });

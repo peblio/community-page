@@ -1,9 +1,9 @@
 import * as ActionTypes from '../constants/reduxConstants.js';
 
-export function setStudioName(value) {
+export function setTagName(value) {
   return (dispatch) => {
     dispatch({
-      type: ActionTypes.SET_STUDIO_NAME,
+      type: ActionTypes.SET_TAG_NAME,
       value
     });
   };
