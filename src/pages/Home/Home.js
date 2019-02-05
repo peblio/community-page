@@ -7,8 +7,9 @@ import { increaseCount } from '../../actions/main';
 import Hero from './Hero/Hero';
 import Contact from '../../components/Contact/Contact';
 import Nav from '../../components/Nav/Nav';
-import Pebls from './Pebls/Pebls';
+import Pebls from '../../components/Pebls/Pebls';
 import Profiles from './Profiles/Profiles';
+import TagInput from '../../components/TagInput/TagInput';
 
 require('./home.scss');
 
@@ -22,6 +23,7 @@ class Home extends Component {
           />
           <Hero />
           <Profiles />
+          <TagInput />
           <Pebls />
           <Contact />
           <p>

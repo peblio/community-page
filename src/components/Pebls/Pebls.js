@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {
-  setStudioName,
+  setTagName,
   setStudioPages
-} from '../../actions/studio';
+} from '../../actions/tag';
 import Nav from '../Nav/Nav';
 import Pebl from './Pebl/Pebl';
 import axios from '../../utils/axios';
@@ -19,31 +19,42 @@ class Pebls extends Component {
       pebls: []
     };
   }
+  
+  componentDidMount() {
+    this.retrievePeblsWithTag(this.props.tagName);
+  }
+
+  retrievePeblsWithTag=(tag) =>{
+    this.props.setTagName(tag);
+    const url = `https://staging-api.peblio.co/api/pages/withTags?tag=${tag}`;
+    const tempPebls = [];
+    axios.get(url)
+      .then((response) => {
+        this.props.setStudioPages(response.data);
+        response.data.map((page, i) => {
+          axios.get(`https://staging-api.peblio.co/api/users/${page.user}`)
+            .then((response) => {
+              console.lo
+              tempPebls.push({
+                title: page.title,
+                tags: page.tags,
+                author: response.data.name
+              });
+              this.setState({ pebls: tempPebls });
+            });
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   componentWillUpdate(nextProps) {
-    if (nextProps.tag !== this.props.tag) {
-      const tag = nextProps.tag;
-      this.props.setStudioName(tag);
-      const url = `http://localhost:8081/api/pages/withTags?tag=${tag}`;
-      const tempPebls = [];
-      axios.get(url)
-        .then((response) => {
-          this.props.setStudioPages(response.data);
-          response.data.map((page, i) => {
-            axios.get(`http://localhost:8081/api/users/${page.user}`)
-              .then((response) => {
-                tempPebls.push({
-                  title: page.title,
-                  tags: page.tags,
-                  author: response.data.name
-                });
-                this.setState({ pebls: tempPebls });
-              });
-          });
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    console.log(nextProps.tagName)
+    console.log(this.props.tagName)
+    if (nextProps.tagName !== this.props.tagName) {
+      const tag = nextProps.tagName;
+      this.retrievePeblsWithTag(tag);
     }
   }
 
@@ -52,7 +63,7 @@ class Pebls extends Component {
     return (
       <ul>
         {pebls.map((pebl, i) => {
-          axios.get(`http://localhost:8081/api/users/${pebl.user}`)
+          axios.get(`https://staging-api.peblio.co/api/users/${pebl.user}`)
             .then((response) => {
               author = response.data.name;
             });
@@ -75,7 +86,7 @@ class Pebls extends Component {
   render() {
     return (
       <div className="studio__container">
-        {this.props.studioName}
+        {this.props.tagName}
         <div className="studio__pebls">
           {this.renderPebls(this.props.studioPages, this.state.pebls)}
         </div>
@@ -86,12 +97,12 @@ class Pebls extends Component {
 
 function mapStateToProps(state) {
   return {
-    studioName: state.studio.name,
-    studioPages: state.studio.pages
+    tagName: state.tag.name,
+    studioPages: state.tag.pages
   };
 }
 const mapDispatchToProps = dispatch => bindActionCreators({
-  setStudioName,
+  setTagName,
   setStudioPages
 }, dispatch);
 

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import main from './main';
-import studio from './studio';
+import tag from './tag';
 
 export default combineReducers({
   main,
-  studio
+  tag
 });
