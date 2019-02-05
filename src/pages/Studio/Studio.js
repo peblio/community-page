@@ -23,7 +23,6 @@ class Studio extends Component {
       <div>
         <Nav />
         <div className="studio__container">
-          <TagInput />
           <Pebls />
         </div>
       </div>

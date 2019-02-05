@@ -19,17 +19,22 @@ class Pebls extends Component {
       pebls: []
     };
   }
+  
+  componentDidMount() {
+    this.retrievePeblsWithTag(this.props.tagName);
+  }
 
   retrievePeblsWithTag=(tag) =>{
     this.props.setTagName(tag);
-    const url = `http://localhost:8081/api/pages/withTags?tag=${tag}`;
+    const url = `https://staging-api.peblio.co/api/pages/withTags?tag=${tag}`;
     const tempPebls = [];
     axios.get(url)
       .then((response) => {
         this.props.setStudioPages(response.data);
         response.data.map((page, i) => {
-          axios.get(`http://localhost:8081/api/users/${page.user}`)
+          axios.get(`https://staging-api.peblio.co/api/users/${page.user}`)
             .then((response) => {
+              console.lo
               tempPebls.push({
                 title: page.title,
                 tags: page.tags,
@@ -46,7 +51,7 @@ class Pebls extends Component {
 
   componentWillUpdate(nextProps) {
     console.log(nextProps.tagName)
-    console.log(nextProps.tag)
+    console.log(this.props.tagName)
     if (nextProps.tagName !== this.props.tagName) {
       const tag = nextProps.tagName;
       this.retrievePeblsWithTag(tag);
@@ -58,7 +63,7 @@ class Pebls extends Component {
     return (
       <ul>
         {pebls.map((pebl, i) => {
-          axios.get(`http://localhost:8081/api/users/${pebl.user}`)
+          axios.get(`https://staging-api.peblio.co/api/users/${pebl.user}`)
             .then((response) => {
               author = response.data.name;
             });
