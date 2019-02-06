@@ -21,7 +21,9 @@ class Pebl extends Component {
         </h2>
         <ul>
           {this.props.tags.map((tag, i) => (
-            <li>
+            <li
+              key={`tag-${i}`}
+            >
               {tag}
             </li>
           ))

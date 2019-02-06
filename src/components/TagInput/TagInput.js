@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {
   setTagName,
-  setStudioPages
+  setStudioPebls
 } from '../../actions/tag';
 import axios from '../../utils/axios';
 
@@ -16,10 +16,11 @@ class TagInput extends Component {
       this.props.setTagName(e.target.value);
     }
   }
-  
+
   render() {
     return (
       <div className="tag-input__container">
+      <p> Search for resources</p>
         <input
           className="tag-input__input"
           type="text"
@@ -34,12 +35,12 @@ class TagInput extends Component {
 function mapStateToProps(state) {
   return {
     tagName: state.tag.name,
-    studioPages: state.tag.pages
+    studioPebls: state.tag.pebls
   };
 }
 const mapDispatchToProps = dispatch => bindActionCreators({
   setTagName,
-  setStudioPages
+  setStudioPebls
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(TagInput);
