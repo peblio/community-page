@@ -2,7 +2,20 @@
 
 .pebl {
   &__container {
-    // background: $white;
+    background: $white;
+    height: 300px;
+    width: 200px;
   }
-
+  &__title {
+    color: $black;
+    font-size: $medium-font;
+    height: 80px;
+  }
+  &__tag-list {
+    display: flex;
+  }
+  &__image {
+    width: 200px;
+    height: 200px;
+  }
 }

@@ -8,7 +8,7 @@ import Hero from './Hero/Hero';
 import Contact from '../../components/Contact/Contact';
 import Nav from '../../components/Nav/Nav';
 import Pebls from '../../components/Pebls/Pebls';
-import Profiles from './Profiles/Profiles';
+// import Profiles from './Profiles/Profiles';
 import TagInput from '../../components/TagInput/TagInput';
 
 require('./home.scss');
@@ -22,7 +22,6 @@ class Home extends Component {
             activeMenuItem="home"
           />
           <Hero />
-          <Profiles />
           <TagInput />
           <Pebls />
           <Contact />

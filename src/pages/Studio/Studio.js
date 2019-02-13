@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {
-  setTagName,
-  setStudioPebls
+  setTagName
 } from '../../actions/tag';
 import Nav from '../../components/Nav/Nav';
 import Pebls from '../../components/Pebls/Pebls';

@@ -10,28 +10,27 @@ export function setTagName(value) {
   };
 }
 
-export function getPeblsFromTag(value) {
-  const url = `https://staging-api.peblio.co/api/pages/withTags?tag=${value}&limit=8`;
+export function getPeblsFromTag(value, limit, offset) {
+  const url = `https://staging-api.peblio.co/api/pages/withTags?tag=${value}&limit=${limit}&offset=${offset}`;
   const tempPebls = [];
   return dispatch => axios.get(url)
     .then((response) => {
-      response.data.map((pebl, i) => {
-        const totalPebls = response.data.length;
-        axios.get(`https://staging-api.peblio.co/api/users/${pebl.user}`)
-          .then((response) => {
-            tempPebls.push({
-              title: pebl.title,
-              tags: pebl.tags,
-              updatedAt: pebl.updatedAt,
-              author: response.data.name
-            });
-            if (tempPebls.length === totalPebls) {
-              return dispatch({
-                type: ActionTypes.SET_STUDIO_PEBLS,
-                value: tempPebls
-              });
-            }
+      console.log(response);
+      const totalNoPebls = response.data.totalDocs;
+      const checkLimit = (totalNoPebls > limit) ? limit : totalNoPebls;
+      response.data.docs.map((pebl, i) => {
+        tempPebls.push({
+          title: pebl.title,
+          tags: pebl.tags,
+          updatedAt: pebl.updatedAt,
+        });
+        if (tempPebls.length === checkLimit) {
+          dispatch(setTotalPebls(totalNoPebls));
+          dispatch({
+            type: ActionTypes.SET_STUDIO_PEBLS,
+            value: tempPebls
           });
+        }
       });
     })
     .catch((error) => {
@@ -39,10 +38,10 @@ export function getPeblsFromTag(value) {
     });
 }
 
-export function setStudioPebls(value) {
+export function setTotalPebls(value) {
   return (dispatch) => {
     dispatch({
-      type: ActionTypes.SET_STUDIO_PEBLS,
+      type: ActionTypes.SET_TOTAL_PEBLS,
       value
     });
   };

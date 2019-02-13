@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {
-  setTagName,
-  setStudioPebls
+  setTagName
 } from '../../actions/tag';
 import axios from '../../utils/axios';
 
@@ -39,8 +38,7 @@ function mapStateToProps(state) {
   };
 }
 const mapDispatchToProps = dispatch => bindActionCreators({
-  setTagName,
-  setStudioPebls
+  setTagName
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(TagInput);

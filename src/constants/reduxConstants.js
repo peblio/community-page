@@ -3,3 +3,4 @@ export const DECREASE_COUNT = 'DECREASE_COUNT';
 
 export const SET_TAG_NAME = 'SET_TAG_NAME';
 export const SET_STUDIO_PEBLS = 'SET_STUDIO_PEBLS';
+export const SET_TOTAL_PEBLS = 'SET_TOTAL_PEBLS';
