@@ -3,23 +3,24 @@
 /*TEXT*/
 .hero {
   &__container {
-    height: auto;
+    height: 80%;
     padding-top: 150px;
     background: $black;
     width: 100%;
   }
-  &__sub-container {
-
-  }
+  // &__sub-container {
+  //
+  // }
   &__header {
     display: block;
-    margin: 0 auto;
+    margin-left: $hero-left-margin;
     font-family: $primary-font;
     color: $white;
     font-size: $hero-heading-font-1;
     line-height: $hero-heading-line-height;
-    text-align: center;
+    text-align: left;
     letter-spacing: 2px;
+    width:350px;
   }
   &__header-small {
     font-size: $hero-heading-font-2;
@@ -27,17 +28,25 @@
   &__subheader {
     display: block;
     width: 500px;
-    margin: $small-margin auto $large-margin;
+    margin-left: $hero-left-margin;
+    margin-top: $small-margin;
     font-family: $secondary-font;
     color: $white;
     font-size: $medium-font;
     line-height: 24px;
     font-weight: 400;
+    text-align: left;
+
   }
+  &__button-container{
+    margin-top: $medium-margin;
+    text-align: left;
+    margin-left: $hero-left-margin;
+    }
   &__button {
     width: $button-width;
     height: $button-height;
-    margin: 0 $medium-margin;
+    margin: 0 $medium-margin 0 0;
     padding: $small-padding $medium-padding ;
     border: 2px solid $green;
     border-radius: 5px;

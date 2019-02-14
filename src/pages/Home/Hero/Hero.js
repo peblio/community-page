@@ -22,22 +22,25 @@ class Hero extends Component {
           >
             Whether you're a CS teacher, or want to bring code to your class, we'll provide the tools and resources you need to teach coding in your classroom.
           </div>
-          <a
-            href="#posts"
-            target="_blank"
-            className="hero__button hero__button-1"
-          >
+          <div className="hero__button-container">
+            <a
+              href="#posts"
+              target="_blank"
+              className="hero__button hero__button-1"
+            >
           Find Resources
-          </a>
-          <a
-            href="http://demo.peblio.co"
-            target="_blank"
-            className="hero__button hero__button-2"
-          >
+            </a>
+            <a
+              href="http://demo.peblio.co"
+              target="_blank"
+              className="hero__button hero__button-2"
+            >
           Start Creating
-          </a>
+            </a>
+          </div>
         </div>
 
+        {' '}
         <div className="hero__sub-container">
           <div className="hero__icons">
             <div className="hero__icon-block" data-ix="icon1">
