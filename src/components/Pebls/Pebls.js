@@ -29,8 +29,11 @@ class Pebls extends Component {
   }
   retrievePeblsWithTag=(tag) =>{
     this.props.setTagName(tag);
-    this.props.getPeblsFromTag(tag, this.state.pageLimit, this.state.offset);
+    this.props.getPeblsFromTag(tag, this.state.pageLimit, 0);
     this.increasePageOffset();
+    this.setState({
+      offset:this.state.pageLimit
+    })
   }
 
   fetchMoreData = () => {
@@ -77,6 +80,7 @@ class Pebls extends Component {
                 author={pebl.author}
                 tags={pebl.tags}
                 updatedAt={pebl.updatedAt}
+                id={pebl.id}
               />
             </li>
           )}

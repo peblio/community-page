@@ -2,22 +2,23 @@
 
 .pebls {
   &__container {
-    background: $green;
     display: flex;
     flex-direction: column;
     padding: 50px 0;
   }
   &__list {
     list-style: none;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
   }
   &__list-scroll {
     display: flex;
-    // flex-direction: column;
     flex-wrap: wrap;
   }
   &__pebl {
-    width: 25%;
-    padding: 1rem;
+    padding: $large-padding $medium-padding;
     box-sizing: border-box;
+    width: 25%;
   }
 }
