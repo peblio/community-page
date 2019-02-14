@@ -36,17 +36,3 @@ class Pebl extends Component {
 }
 
 export default Pebl;
-
-// <ul
-//   className="pebl__tag-list"
-// >
-//   {this.props.tags.map((tag, i) => (
-//     <li
-//       key={`tag-${i}`}
-//       className="pebl__tag"
-//     >
-//       {tag}
-//     </li>
-//   ))
-//   }
-// </ul>
