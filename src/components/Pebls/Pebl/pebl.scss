@@ -3,19 +3,38 @@
 .pebl {
   &__container {
     background: $white;
-    height: 300px;
-    width: 200px;
+    width: $pebl-image-size;
+    border-radius: $border-radius;
+    -webkit-box-shadow:0 0px 6px rgba(0, 0, 0, 0.2);
+    box-shadow:0 0px 6px rgba(0, 0, 0, 0.2);
+    border-top: $yellow $border-radius*1.5 solid;
   }
   &__title {
     color: $black;
     font-size: $medium-font;
-    height: 80px;
+    height: $medium-line-height*2;
+    line-height: $medium-line-height;
+    padding: 0 $small-padding;
+    font-weight: 600;
   }
   &__tag-list {
     display: flex;
   }
   &__image {
-    width: 200px;
-    height: 200px;
+    width: $pebl-image-size;
+    height: $pebl-image-size;
+  }
+  &__updated {
+    background: $grey;
+    text-transform: uppercase;
+    font-size: $small-font;
+    line-height: $small-line-height;
+    padding: $small-padding/2 $small-padding;
+    color: $white;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
   }
 }

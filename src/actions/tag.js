@@ -17,20 +17,21 @@ export function getPeblsFromTag(value, limit, offset) {
     .then((response) => {
       console.log(response);
       const totalNoPebls = response.data.totalDocs;
-      const checkLimit = (totalNoPebls > limit) ? limit : totalNoPebls;
+      const checkLimit = (totalNoPebls > limit * (offset + 1)) ? limit : totalNoPebls;
       response.data.docs.map((pebl, i) => {
         tempPebls.push({
+          id: pebl.id,
           title: pebl.title,
           tags: pebl.tags,
           updatedAt: pebl.updatedAt,
         });
-        if (tempPebls.length === checkLimit) {
-          dispatch(setTotalPebls(totalNoPebls));
-          dispatch({
-            type: ActionTypes.SET_STUDIO_PEBLS,
-            value: tempPebls
-          });
-        }
+        // if (tempPebls.length === checkLimit) {
+      });
+      dispatch(setTotalPebls(totalNoPebls));
+      dispatch({
+        type: ActionTypes.SET_STUDIO_PEBLS,
+        value: tempPebls
+        // }
       });
     })
     .catch((error) => {
