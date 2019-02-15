@@ -20,16 +20,19 @@ class TagInput extends Component {
     return (
       <div className="tag-input__container">
       <p
-      className="tag-input__title"
+        className="tag-input__title"
       >
         Search for resources
       </p>
+      <div className="tag-input__sub-container">
+        <i class="fa fa-search tag-input__icon" aria-hidden="true"></i>
         <input
           className="tag-input__input"
           type="text"
           placeholder="enter tags..."
           onKeyPress={this.handleKeyPress}
         />
+        </div>
       </div>
     );
   }

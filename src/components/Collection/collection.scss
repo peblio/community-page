@@ -3,7 +3,7 @@
 .collection {
   &__container {
     background: $white;
-    width: $pebl-image-size;
+    width: $pebl-image-size-width;
     border-radius: $border-radius;
     -webkit-box-shadow:0 0px 6px rgba(0, 0, 0, 0.2);
     box-shadow:0 0px 6px rgba(0, 0, 0, 0.2);
@@ -12,7 +12,7 @@
   &__title {
     color: $black;
     font-size: $medium-font;
-    height: $pebl-image-size;
+    height: $pebl-image-size-height;
     line-height: $medium-line-height;
     padding: 0 $small-padding;
     font-weight: 600;
@@ -21,7 +21,6 @@
     align-items: center;
   }
   &__no-files {
-    background: $grey;
     text-transform: uppercase;
     font-size: $small-font;
     line-height: $small-line-height;

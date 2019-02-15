@@ -14,15 +14,15 @@
   &__list {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     overflow-x: scroll;
   }
   &__heading {
-    font-size: $medium-font;
-    text-transform: uppercase;
+    font-size: $large-font;
     color: $black;
-    padding: $medium-padding 0;
-    border-bottom: $white $border solid;
-    display: flex;
+    padding: $small-padding 0;
+    margin-bottom: 0;
+    margin-top: $large-padding*2;
   }
 }

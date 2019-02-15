@@ -35,7 +35,7 @@ class Collections extends Component {
         <h2
           className="featured__heading"
         >
-        Featured collections
+        Popular collections
         </h2>
         {this.renderCollections(FeaturedCollections.COLLECTIONS)}
       </div>

@@ -14,7 +14,7 @@ class Pebl extends Component {
           href={`https://staging.peblio.co/pebl/${this.props.id}`}
         >
           <img
-            src="https://placekitten.com/200/200"
+            src="https://placekitten.com/200/150"
             className="pebl__image"
           />
           <h1

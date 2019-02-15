@@ -18,7 +18,7 @@ class Pebls extends Component {
     this.state = {
       pebls: [],
       offset: 0,
-      pageLimit:8
+      pageLimit:11
     };
   }
 
@@ -57,7 +57,7 @@ class Pebls extends Component {
 
 
   renderPebls(studioPebls) {
-    console.log(studioPebls)
+    console.log(window)
     return (
       <ul className="pebls__list">
       <InfiniteScroll
@@ -71,7 +71,7 @@ class Pebls extends Component {
               <b>Yay! You have seen it all</b>
             </p>
           }
-          height={500}
+          height={window.innerHeight*0.8}
         >
         {studioPebls.map((pebl, i) =>  {
           return(

@@ -3,37 +3,39 @@
 .pebl {
   &__container {
     background: $white;
-    width: $pebl-image-size;
+    width: $pebl-image-size-width;
     border-radius: $border-radius;
     -webkit-box-shadow:0 0px 6px rgba(0, 0, 0, 0.2);
     box-shadow:0 0px 6px rgba(0, 0, 0, 0.2);
     border-top: $yellow $border-radius*1.5 solid;
+    margin: $pebl-margin;
   }
   &__title {
     color: $black;
     font-size: $medium-font;
-    height: $medium-line-height*2;
+    height: $pebl-image-size-height*0.5;
     line-height: $medium-line-height;
     padding: 0 $small-padding;
     font-weight: 600;
+    text-align: left;
   }
   &__tag-list {
     display: flex;
   }
   &__image {
-    width: $pebl-image-size;
-    height: $pebl-image-size;
+    width: $pebl-image-size-width;
+    height: $pebl-image-size-height;
   }
   &__updated {
-    background: $grey;
+    background: $white;
     text-transform: uppercase;
     font-size: $small-font;
     line-height: $small-line-height;
     padding: $small-padding/2 $small-padding;
-    color: $white;
+    color: $grey;
     font-weight: 600;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
   }

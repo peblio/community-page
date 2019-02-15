@@ -35,7 +35,7 @@ class Pebls extends Component {
         <h2
           className="featured__heading"
         >
-        Featured Pebls
+        Popular Pebls
         </h2>
         <div className="studio__pebls">
           {this.renderPebls(featuredPebls.PEBLS)}
