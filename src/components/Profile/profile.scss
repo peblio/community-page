@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+.profile {
+  &__container {
+    width: $pebl-image-size;
+
+  }
+  &__title {
+    color: white;
+    font-size: $medium-font;
+    line-height: $medium-line-height;
+    padding: 0 $small-padding;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image{
+    height: $pebl-image-size;
+    width: $pebl-image-size;
+    border-radius: $pebl-image-size/2;
+  }
+}

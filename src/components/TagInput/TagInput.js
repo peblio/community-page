@@ -3,12 +3,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {
-  setTagName,
-  setStudioPages
+  setTagName
 } from '../../actions/tag';
 import axios from '../../utils/axios';
 
-// require('./studio.scss');
+require('./tagInput.scss');
 
 class TagInput extends Component {
   handleKeyPress=(e)=>{
@@ -16,10 +15,15 @@ class TagInput extends Component {
       this.props.setTagName(e.target.value);
     }
   }
-  
+
   render() {
     return (
       <div className="tag-input__container">
+      <p
+      className="tag-input__title"
+      >
+        Search for resources
+      </p>
         <input
           className="tag-input__input"
           type="text"
@@ -34,12 +38,11 @@ class TagInput extends Component {
 function mapStateToProps(state) {
   return {
     tagName: state.tag.name,
-    studioPages: state.tag.pages
+    studioPebls: state.tag.pebls
   };
 }
 const mapDispatchToProps = dispatch => bindActionCreators({
-  setTagName,
-  setStudioPages
+  setTagName
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(TagInput);

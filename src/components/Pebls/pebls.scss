@@ -2,11 +2,23 @@
 
 .pebls {
   &__container {
-    background: $green;
-    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 50px 0;
   }
-
+  &__list {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+  &__list-scroll {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__pebl {
+    padding: $large-padding $medium-padding;
+    box-sizing: border-box;
+    width: 25%;
+  }
 }
