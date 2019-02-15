@@ -8,7 +8,7 @@ import {
   getPeblsFromTag
 } from '../../actions/tag';
 import Nav from '../Nav/Nav';
-import Pebl from './Pebl/Pebl';
+import Pebl from '../Pebl/Pebl';
 
 require('./pebls.scss');
 
@@ -44,10 +44,15 @@ class Pebls extends Component {
   }
 
   componentWillUpdate(nextProps) {
+    console.log('am i in here')
     if (nextProps.tagName !== this.props.tagName) {
       const tag = nextProps.tagName;
       this.retrievePeblsWithTag(tag);
     }
+  }
+
+  componentWillMount() {
+    this.retrievePeblsWithTag(this.props.tagName);
   }
 
 

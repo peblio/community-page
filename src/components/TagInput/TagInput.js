@@ -7,7 +7,7 @@ import {
 } from '../../actions/tag';
 import axios from '../../utils/axios';
 
-// require('./studio.scss');
+require('./tagInput.scss');
 
 class TagInput extends Component {
   handleKeyPress=(e)=>{
@@ -19,7 +19,11 @@ class TagInput extends Component {
   render() {
     return (
       <div className="tag-input__container">
-      <p> Search for resources</p>
+      <p
+      className="tag-input__title"
+      >
+        Search for resources
+      </p>
         <input
           className="tag-input__input"
           type="text"

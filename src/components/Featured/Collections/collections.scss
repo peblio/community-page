@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+
+.featured-collections {
+  &__container {
+    width: 80%;
+  }
+  &__collection {
+    padding: $large-padding $medium-padding;
+    box-sizing: border-box;
+  }
+}
