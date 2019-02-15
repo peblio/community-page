@@ -1,37 +1,32 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
+import Collection from '../../Collection/Collection';
 
 export default class SimpleSlider extends Component {
-  createArray=()=> {
-    let items=[];
-    for(let i=0;i<6;i++) {
-      items.push(
-        <div>
-          <h3>
-          {i}
-          </h3>
-        </div>
-      )
-    }
-    console.log(items)
-    return items;
-  }
-
   render() {
-    this.createArray();
+    const rows = this.props.rows;
     const settings = {
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 4,
-      slidesToScroll: 1
-    }
+      slidesToScroll: 1,
+      rows: 1,
+      responsive: [
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 4,
+          }
+        }
+      ]
+
+    };
 
     return (
       <div>
-        <h2> Single Item</h2>
         <Slider {...settings}>
-          {this.createArray()}
+          {this.props.items}
         </Slider>
       </div>
     );
