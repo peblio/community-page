@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import FeaturedProfiles from './Profiles/Profiles';
 import FeaturedPebls from './Pebls/Pebls';
 import FeaturedCollections from './Collections/Collections';
+import SimpleSlider from './SimpleSlider/SimpleSlider';
 
 require('./featured.scss');
 
@@ -16,6 +17,7 @@ class Featured extends Component {
   render() {
     return (
       <div className="featured__container">
+        <SimpleSlider />
         <FeaturedPebls />
         <FeaturedCollections />
         <FeaturedProfiles />
