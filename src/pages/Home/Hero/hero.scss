@@ -8,9 +8,14 @@
     background: $black;
     width: 100%;
   }
-  // &__sub-container {
-  //
-  // }
+  &__sub-container {
+    width: 50%;
+    margin-right: 0px;
+    display: inline-block;
+    float: left;
+    margin-bottom: 70px;
+    margin-top:$medium-margin
+  }
   &__header {
     display: block;
     margin-left: $hero-left-margin;
@@ -68,6 +73,16 @@
       color: $green;
       background-color: $white;
     }
+  }
+  &__image{
+    float:right;
+  }
+  &__main-image{
+    float: right;
+    max-width: 50%;
+  }
+  &__pebl{
+    width: 100%;
   }
 }
 

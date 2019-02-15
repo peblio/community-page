@@ -41,25 +41,8 @@ class Hero extends Component {
         </div>
 
         {' '}
-        <div className="hero__sub-container">
-          <div className="hero__icons">
-            <div className="hero__icon-block" data-ix="icon1">
-              <img src="https://uploads-ssl.webflow.com/5b742f79ea1bb015a93b0c1e/5b75861963ff82a35e10d4c9_tools.png" alt="" className="hero__icon-img" />
-              <div className="hero__icon-desc">One tool for every language</div>
-            </div>
-            <div className="hero__icon-block" data-ix="icon-2">
-              <img src="https://uploads-ssl.webflow.com/5b742f79ea1bb015a93b0c1e/5b7588632c58c5ec7029a18d_worksheets.png" alt="" className="hero__icon-img" />
-              <div className="hero__icon-desc">Adaptable, interactive worksheets</div>
-            </div>
-            <div className="hero__icon-block" data-ix="icon-3">
-              <img src="https://uploads-ssl.webflow.com/5b742f79ea1bb015a93b0c1e/5b75887416d8f22782c5e3fe_workflow.png" alt="" className="hero__icon-img" />
-              <div className="hero__icon-desc">A seamless workflow for classes</div>
-            </div>
-            <div className="hero__icon-block" data-ix="icon-4">
-              <img src="https://uploads-ssl.webflow.com/5b742f79ea1bb015a93b0c1e/5b75888e7c629c01bd752acb_community.png" alt="" className="hero__icon-img" />
-              <div className="hero__icon-desc">An online community of educators</div>
-            </div>
-          </div>
+        <div className="hero__main-image">
+          <img src="https://s3.amazonaws.com/peblio-files/TeachCS/images/BylWSVXH4_Group%203%20%284%29.png" alt="" className="hero__pebl" />
         </div>
       </div>
     );
