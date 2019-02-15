@@ -50,7 +50,6 @@
     "react-app-polyfill": "^0.2.0",
     "react-dev-utils": "^7.0.1",
     "react-dom": "^16.7.0",
-    "react-horizontal-scrolling-menu": "^0.4.8",
     "react-infinite-scroll-component": "^4.5.0",
     "react-redux": "^6.0.0",
     "react-router": "^4.3.1",
@@ -127,5 +126,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "react-alice-carousel": "^1.13.1"
   }
 }

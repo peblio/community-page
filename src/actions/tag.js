@@ -24,6 +24,7 @@ export function getPeblsFromTag(value, limit, offset) {
           title: pebl.title,
           tags: pebl.tags,
           updatedAt: pebl.updatedAt,
+          user: pebl.user
         });
         // if (tempPebls.length === checkLimit) {
       });

@@ -1,10 +1,34 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import moment from 'moment';
+import axios from '../../utils/axios';
 
 require('./pebl.scss');
 
 class Pebl extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userName: ''
+    };
+  }
+
+  componentDidMount() {
+    this.getPeblAuthor(this.props.id);
+  }
+
+  getPeblAuthor = (pageId) => {
+    const url = `https://staging-api.peblio.co/api/users/pageAuthor/${pageId}`;
+    axios.get(url)
+      .then((response) => {
+        console.log(response.data.name);
+        this.setState({userName: response.data.name})
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   render() {
     return (
       <div className="pebl__container">
@@ -25,6 +49,7 @@ class Pebl extends Component {
           <p
             className="pebl__updated"
           >
+          {this.state.userName}
           Last Update
             {' '}
             {moment(this.props.updatedAt).format('DD/MMM/YYYY')}
