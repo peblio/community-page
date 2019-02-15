@@ -19,7 +19,6 @@ class Collections extends Component {
             <Collection
               key={`collection-${i}`}
               title={collection.title}
-              // updatedAt={pebl.updatedAt}
               id={collection.id}
             />
           </li>

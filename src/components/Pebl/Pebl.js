@@ -5,7 +5,15 @@ import moment from 'moment';
 require('./pebl.scss');
 
 class Pebl extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: ''
+    };
+  }
+
   render() {
+    console.log('poop');
     return (
       <div className="pebl__container">
         <a

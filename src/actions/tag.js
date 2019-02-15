@@ -11,28 +11,31 @@ export function setTagName(value) {
 }
 
 export function getPeblsFromTag(value, limit, offset) {
+  console.log(value);
   const url = `https://staging-api.peblio.co/api/pages/withTags?tag=${value}&limit=${limit}&offset=${offset}`;
-  const tempPebls = [];
+  const tempPebls = {};
   return dispatch => axios.get(url)
     .then((response) => {
-      console.log(response);
       const totalNoPebls = response.data.totalDocs;
       const checkLimit = (totalNoPebls > limit * (offset + 1)) ? limit : totalNoPebls;
+      let count = 0;
       response.data.docs.map((pebl, i) => {
-        tempPebls.push({
+        count++;
+        tempPebls[pebl.id] = {
           id: pebl.id,
           title: pebl.title,
           tags: pebl.tags,
           updatedAt: pebl.updatedAt,
+        };
+      });
+      if (checkLimit === count) {
+        console.log(tempPebls);
+        dispatch(setTotalPebls(totalNoPebls));
+        dispatch({
+          type: ActionTypes.SET_STUDIO_PEBLS,
+          value: tempPebls
         });
-        // if (tempPebls.length === checkLimit) {
-      });
-      dispatch(setTotalPebls(totalNoPebls));
-      dispatch({
-        type: ActionTypes.SET_STUDIO_PEBLS,
-        value: tempPebls
-        // }
-      });
+      }
     })
     .catch((error) => {
       console.log(error);
@@ -47,3 +50,37 @@ export function setTotalPebls(value) {
     });
   };
 }
+
+// export function setPeblUser(pebl, id, value) {
+//   console.log(value);
+//   const url = `https://staging-api.peblio.co/api/pages/withTags?tag=${value}&limit=${limit}&offset=${offset}`;
+//   const tempPebls = {};
+//   return dispatch => axios.get(url)
+//     .then((response) => {
+//       const totalNoPebls = response.data.totalDocs;
+//       const checkLimit = (totalNoPebls > limit * (offset + 1)) ? limit : totalNoPebls;
+//       let count = 0;
+//       console.log(checkLimit);
+//       response.data.docs.map((pebl, i) => {
+//         count++;
+//         tempPebls[pebl.id] = {
+//           id: pebl.id,
+//           title: pebl.title,
+//           tags: pebl.tags,
+//           updatedAt: pebl.updatedAt,
+//           user: pebl.user,
+//         };
+//       });
+//       if (checkLimit === count) {
+//         console.log(tempPebls);
+//         dispatch({
+//           type: ActionTypes.SET_STUDIO_PEBLS,
+//           value: tempPebls
+//         });
+//         dispatch(setTotalPebls(totalNoPebls));
+//       }
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// }

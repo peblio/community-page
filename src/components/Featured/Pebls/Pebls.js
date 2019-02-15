@@ -19,7 +19,6 @@ class Pebls extends Component {
             <Pebl
               key={`pebl-${i}`}
               title={pebl.title}
-              // updatedAt={pebl.updatedAt}
               id={pebl.id}
             />
           </li>

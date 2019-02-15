@@ -25,7 +25,7 @@ class TagInput extends Component {
         Search for resources
       </p>
       <div className="tag-input__sub-container">
-        <i class="fa fa-search tag-input__icon" aria-hidden="true"></i>
+        <i className="fa fa-search tag-input__icon" aria-hidden="true"></i>
         <input
           className="tag-input__input"
           type="text"

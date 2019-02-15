@@ -2,7 +2,7 @@ import * as ActionTypes from '../constants/reduxConstants';
 
 const initialState = {
   name: '',
-  pebls: [],
+  pebls: {},
   totalPebls: 0
 };
 
@@ -11,12 +11,15 @@ export default (state = initialState, action) => {
     case ActionTypes.SET_TAG_NAME:
       return Object.assign({}, state, {
         name: action.value,
-        pebls: []
+        pebls: {}
       });
 
     case ActionTypes.SET_STUDIO_PEBLS:
+      const tempPebls = state.pebls;
+      Object.assign(tempPebls, action.value);
+      console.log(tempPebls);
       return Object.assign({}, state, {
-        pebls: state.pebls.concat(action.value)
+        pebls: tempPebls
       });
 
     case ActionTypes.SET_TOTAL_PEBLS:

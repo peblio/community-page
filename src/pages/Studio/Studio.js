@@ -14,6 +14,7 @@ require('./studio.scss');
 class Studio extends Component {
   componentDidMount() {
     const tempTag = this.props.match.params.tag;
+    console.log(this.props.match.params.tag);
     this.props.setTagName(tempTag);
   }
 

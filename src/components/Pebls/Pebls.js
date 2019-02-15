@@ -18,7 +18,8 @@ class Pebls extends Component {
     this.state = {
       pebls: [],
       offset: 0,
-      pageLimit:11
+      pageLimit:11,
+      potato:"poop"
     };
   }
 
@@ -37,14 +38,17 @@ class Pebls extends Component {
   }
 
   fetchMoreData = () => {
-    console.log('in here ??')
-    console.log(this.state.offset)
     this.props.getPeblsFromTag(this.props.tagName, this.state.pageLimit, this.state.offset);
     this.increasePageOffset();
   }
 
   componentWillUpdate(nextProps) {
-    console.log('am i in here')
+    // // console.log(nextProps.studioPebls)
+    // console.log(Object.keys(nextProps.studioPebls).length)
+    // Object.keys(nextProps.studioPebls).forEach((key)=>{
+    //   console.log("For Each Key: ", key)
+    //   console.log("For Each Value: ", studioPebls[key])
+    // })
     if (nextProps.tagName !== this.props.tagName) {
       const tag = nextProps.tagName;
       this.retrievePeblsWithTag(tag);
@@ -52,52 +56,27 @@ class Pebls extends Component {
   }
 
   componentWillMount() {
+    // console.log(this.props.tagName)
     this.retrievePeblsWithTag(this.props.tagName);
   }
 
-
   renderPebls(studioPebls) {
-    console.log(window)
+    Object.keys(studioPebls).forEach((i)=>{
+      console.log(studioPebls[i])
+    })
     return (
-      <ul className="pebls__list">
-      <InfiniteScroll
-          className="pebls__list-scroll"
-          dataLength={this.props.totalPebls}
-          next={this.fetchMoreData}
-          hasMore={true}
-          loader={<h4>Loading...</h4>}
-          endMessage={
-            <p style={{textAlign: 'center'}}>
-              <b>Yay! You have seen it all</b>
-            </p>
-          }
-          height={window.innerHeight*0.8}
-        >
-        {studioPebls.map((pebl, i) =>  {
-          return(
-            <li
-              key={`pebl-${i}`}
-              className="pebls__pebl"
-            >
-              <Pebl
-                key={`pebl-${i}`}
-                title={pebl.title}
-                author={pebl.author}
-                tags={pebl.tags}
-                updatedAt={pebl.updatedAt}
-                id={pebl.id}
-              />
-            </li>
-          )}
-        )
-      }
-      </InfiniteScroll>
-      </ul>
+      <div>
+        <h1>Potato</h1>
+        <ul className="pebls__list">
+          {this.state.potato}
+        </ul>
+      </div>
     );
   }
 
   render() {
     console.log(this.props.studioPebls)
+    debugger;
     return (
       <div className="studio__container">
         {this.props.tagName}
@@ -122,3 +101,21 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Pebls);
+
+
+/*
+<InfiniteScroll
+    className="pebls__list-scroll"
+    dataLength={this.props.totalPebls}
+    next={this.fetchMoreData}
+    hasMore={true}
+    loader={<h4>Loading...</h4>}
+    endMessage={
+      <p style={{textAlign: 'center'}}>
+        <b>Yay! You have seen it all</b>
+      </p>
+    }
+    height={window.innerHeight*0.8}
+  >
+
+*/
