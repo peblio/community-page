@@ -16,9 +16,9 @@ class Featured extends Component {
   render() {
     return (
       <div className="featured__container">
-        <FeaturedProfiles />
         <FeaturedPebls />
         <FeaturedCollections />
+        <FeaturedProfiles />
       </div>
     );
   }
