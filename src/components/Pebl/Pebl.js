@@ -18,7 +18,7 @@ class Pebl extends Component {
   }
 
   getPeblAuthor = (pageId) => {
-    const url = `https://staging-api.peblio.co/api/users/pageAuthor/${pageId}`;
+    const url = `https://api.peblio.co/api/users/pageAuthor/${pageId}`;
     axios.get(url)
       .then((response) => {
         console.log(response.data.name);
@@ -35,7 +35,7 @@ class Pebl extends Component {
         <a
           className="pebl__link"
           target="_blank"
-          href={`https://staging.peblio.co/pebl/${this.props.id}`}
+          href={`https://demo.peblio.co/pebl/${this.props.id}`}
         >
           <img
             src="https://placekitten.com/200/150"

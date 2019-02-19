@@ -87,7 +87,9 @@ class Featured extends Component {
           >
         Popular Pebls
           </h2>
-          <ul>
+          <ul
+            className="featured__list"
+          >
             <SimpleSlider
               items={this.renderPebls(FeaturedConstants.PEBLS)}
               rows={2}
@@ -100,10 +102,12 @@ class Featured extends Component {
           >
         Popular Collections
           </h2>
-          <ul>
+          <ul
+            className="featured__list"
+          >
             <SimpleSlider
               items={this.renderCollections(FeaturedConstants.COLLECTIONS)}
-              rows={2}
+              rows={1}
             />
           </ul>
         </div>
@@ -113,10 +117,12 @@ class Featured extends Component {
           >
           Featured Creators
           </h2>
-          <ul>
+          <ul
+            className="featured__list"
+          >
             <SimpleSlider
               items={this.renderProfiles(FeaturedConstants.PROFILES)}
-              rows={2}
+              rows={1}
             />
           </ul>
         </div>

@@ -11,7 +11,7 @@ export function setTagName(value) {
 }
 
 export function getPeblsFromTag(value, limit, offset) {
-  const url = `https://staging-api.peblio.co/api/pages/withTags?tag=${value}&limit=${limit}&offset=${offset}`;
+  const url = `https://api.peblio.co/api/pages/withTags?tag=${value}&limit=${limit}&offset=${offset}`;
   const tempPebls = [];
   return dispatch => axios.get(url)
     .then((response) => {

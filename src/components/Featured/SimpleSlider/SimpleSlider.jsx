@@ -9,18 +9,46 @@ export default class SimpleSlider extends Component {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 4,
+      slidesToShow: 5,
       slidesToScroll: 1,
-      rows: 1,
+      rows,
       responsive: [
         {
-          breakpoint: 800,
+          breakpoint: 2000,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 1600,
           settings: {
             slidesToShow: 4,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },,
+        {
+          breakpoint: 550,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
           }
         }
       ]
-
     };
 
     return (
