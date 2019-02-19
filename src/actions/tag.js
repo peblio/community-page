@@ -15,7 +15,6 @@ export function getPeblsFromTag(value, limit, offset) {
   const tempPebls = [];
   return dispatch => axios.get(url)
     .then((response) => {
-      console.log(response);
       const totalNoPebls = response.data.totalDocs;
       const checkLimit = (totalNoPebls > limit * (offset + 1)) ? limit : totalNoPebls;
       response.data.docs.map((pebl, i) => {
@@ -26,13 +25,11 @@ export function getPeblsFromTag(value, limit, offset) {
           updatedAt: pebl.updatedAt,
           user: pebl.user
         });
-        // if (tempPebls.length === checkLimit) {
       });
       dispatch(setTotalPebls(totalNoPebls));
       dispatch({
         type: ActionTypes.SET_STUDIO_PEBLS,
         value: tempPebls
-        // }
       });
     })
     .catch((error) => {

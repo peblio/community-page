@@ -17,7 +17,6 @@ class Featured extends Component {
 
   renderCollections(collections) {
     const newCollections = [];
-    console.log(collections);
     collections.map((collection, i) => {
       newCollections.push(
         <li
@@ -37,7 +36,6 @@ class Featured extends Component {
 
   renderPebls(pebls) {
     const newPebls = [];
-    console.log(pebls);
     pebls.map((pebl, i) => {
       newPebls.push(
         <li
@@ -58,7 +56,6 @@ class Featured extends Component {
 
   renderProfiles(profiles) {
     const newProfiles = [];
-    console.log(profiles);
     profiles.map((profile, i) => {
       newProfiles.push(
         <li

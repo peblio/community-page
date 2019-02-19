@@ -127,8 +127,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "devDependencies": {
-    "react-alice-carousel": "^1.13.1"
   }
 }

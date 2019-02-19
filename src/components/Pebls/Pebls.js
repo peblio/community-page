@@ -37,14 +37,11 @@ class Pebls extends Component {
   }
 
   fetchMoreData = () => {
-    console.log('in here ??')
-    console.log(this.state.offset)
     this.props.getPeblsFromTag(this.props.tagName, this.state.pageLimit, this.state.offset);
     this.increasePageOffset();
   }
 
   componentWillUpdate(nextProps) {
-    console.log('am i in here')
     if (nextProps.tagName !== this.props.tagName) {
       const tag = nextProps.tagName;
       this.retrievePeblsWithTag(tag);
@@ -57,7 +54,6 @@ class Pebls extends Component {
 
 
   renderPebls(studioPebls) {
-    console.log(window)
     return (
       <ul className="pebls__list">
       <InfiniteScroll
@@ -98,7 +94,6 @@ class Pebls extends Component {
   }
 
   render() {
-    console.log(this.props.studioPebls)
     return (
       <div className="studio__container">
         {this.props.tagName}

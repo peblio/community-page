@@ -21,7 +21,6 @@ class Pebl extends Component {
     const url = `https://api.peblio.co/api/users/pageAuthor/${pageId}`;
     axios.get(url)
       .then((response) => {
-        console.log(response.data.name);
         this.setState({userName: response.data.name})
       })
       .catch((error) => {
