@@ -11,6 +11,7 @@
     padding: $small-padding;
     height: $nav-height;
     box-sizing: border-box;
+    z-index: 100;
   }
   &__left {
     padding-left: $medium-padding;

@@ -2,7 +2,7 @@
 
 .profile {
   &__container {
-    width: $pebl-image-size;
+    width: $pebl-image-size-width;
 
   }
   &__title {
@@ -16,8 +16,10 @@
     align-items: center;
   }
   &__image{
-    height: $pebl-image-size;
-    width: $pebl-image-size;
-    border-radius: $pebl-image-size/2;
+    height: $pebl-image-size-width;
+    width: $pebl-image-size-width;
+    border-radius: $pebl-image-size-width/2;
+    -webkit-box-shadow:0 0px 7px rgba(0, 0, 0, 0.2);
+    box-shadow:0 0px 7px rgba(0, 0, 0, 0.2);
   }
 }

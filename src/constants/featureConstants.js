@@ -37,6 +37,26 @@ export const PEBLS = [
     id: 'l315usow-',
   },
   {
+    title: 'Intro to ML5-1 - Feature Extraction',
+    id: 'l315usow-',
+  },
+  {
+    title: 'Intro to ML5-2 - Feature Extraction',
+    id: 'l315usow-',
+  },
+  {
+    title: 'Intro to ML5-3 - Feature Extraction',
+    id: 'l315usow-',
+  },
+  {
+    title: 'Intro to ML5 - Feature Extraction',
+    id: 'l315usow-',
+  },
+  {
+    title: 'Intro to ML5 - Feature Extraction',
+    id: 'l315usow-',
+  },
+  {
     title: 'Intro to ML5 - Feature Extraction',
     id: 'l315usow-',
   },

@@ -2,10 +2,10 @@
 
 .studio {
   &__container {
-    background: $darkgrey;
+    background: $offwhite;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: $nav-height;
+    padding-top: $large-padding;
   }
 }

@@ -9,7 +9,7 @@
   &__list {
     list-style: none;
     padding: 0;
-    width: 80%;
+    width: 1*$pebl-image-size-width + 2*$pebl-margin;
     margin: 0 auto;
   }
   &__list-scroll {
@@ -17,8 +17,30 @@
     flex-wrap: wrap;
   }
   &__pebl {
-    padding: $large-padding $medium-padding;
     box-sizing: border-box;
-    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pebls {
+    &__list {
+      width: 2*$pebl-image-size-width + 4*$pebl-margin;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .pebls {
+    &__list {
+      width: 4*$pebl-image-size-width + 8*$pebl-margin;
+    }
+  }
+}
+
+@media only screen and (min-width: 1680px) {
+  .pebls {
+    &__list {
+      width: 5*$pebl-image-size-width + 10*$pebl-margin;
+    }
   }
 }
