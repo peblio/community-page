@@ -18,6 +18,8 @@
   }
   &__pebl {
     box-sizing: border-box;
+    margin: $pebl-margin;
+    border-radius: $border-radius;
   }
 }
 

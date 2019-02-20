@@ -47,6 +47,7 @@ class Featured extends Component {
             title={pebl.title}
             // updatedAt={pebl.updatedAt}
             id={pebl.id}
+            description={pebl.description}
           />
         </li>
       );

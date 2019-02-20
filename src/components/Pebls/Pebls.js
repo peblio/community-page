@@ -83,6 +83,7 @@ class Pebls extends Component {
                 updatedAt={pebl.updatedAt}
                 id={pebl.id}
                 user={pebl.user}
+                description={pebl.description}
               />
             </li>
           )}
