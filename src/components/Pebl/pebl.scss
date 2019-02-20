@@ -18,7 +18,7 @@ $pebl-colors: $border-yellow, $border-pink, $border-green, $border-blue;
     &-title {
       color: $white;
       font-size: $medium-font;
-      height: $pebl-image-size-height*0.5;
+      height: $pebl-image-size-height*0.45;
       line-height: $medium-line-height;
       font-weight: 800;
       text-align: left;
@@ -68,7 +68,7 @@ $pebl-colors: $border-yellow, $border-pink, $border-green, $border-blue;
   &__title {
     color: $black;
     font-size: $medium-font;
-    height: $pebl-image-size-height*0.4;
+    height: $pebl-image-size-height*0.45;
     line-height: $medium-line-height;
     padding: 0 $small-padding;
     font-weight: 600;

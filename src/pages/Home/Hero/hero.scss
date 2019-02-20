@@ -35,7 +35,7 @@
   }
   &__subheader {
     display: block;
-    width: 500px;
+    max-width: 500px;
     margin-left: $hero-left-margin;
     margin-top: $small-margin;
     font-family: $secondary-font;
