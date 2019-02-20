@@ -35,46 +35,57 @@ export const PEBLS = [
   {
     title: 'Intro to ML5 - Feature Extraction',
     id: 'l315usow-',
+    description: 'this is an awesome project, yay! actually let me tell you something else, this project is not only awesome, its amazing! BAMAZING I SAY'
   },
   {
     title: 'Intro to ML5-1 - Feature Extraction',
     id: 'l315usow-',
+    description: 'this is an awesome project, yay!'
   },
   {
     title: 'Intro to ML5-2 - Feature Extraction',
     id: 'l315usow-',
+    description: 'this is an awesome project, yay!'
   },
   {
     title: 'Intro to ML5-3 - Feature Extraction',
     id: 'l315usow-',
+    description: 'this is an awesome project, yay!'
   },
   {
     title: 'Intro to ML5 - Feature Extraction',
     id: 'l315usow-',
+    description: 'this is an awesome project, yay!'
   },
   {
     title: 'Intro to ML5 - Feature Extraction',
     id: 'l315usow-',
+    description: 'this is an awesome project, yay!'
   },
   {
     title: 'Intro to ML5 - Feature Extraction',
     id: 'l315usow-',
+    description: 'this is an awesome project, yay!'
   },
   {
     title: 'Intro to ML5 - Feature Extraction',
     id: 'l315usow-',
+    description: 'this is an awesome project, yay!'
   },
   {
     title: 'Intro to ML5 - Feature Extraction',
     id: 'l315usow-',
+    description: 'this is an awesome project, yay!'
   },
   {
     title: 'Intro to ML5 - Feature Extraction',
     id: 'l315usow-',
+    description: 'this is an awesome project, yay!'
   },
   {
     title: 'Intro to ML5 - Feature Extraction',
     id: 'l315usow-',
+    description: 'this is an awesome project, yay!'
   }
 ];
 

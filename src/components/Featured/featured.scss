@@ -1,6 +1,11 @@
 @import '../../styles/variables';
 
 .featured {
+  &-pebls__pebl {
+    margin: $pebl-margin;
+    border-radius: $border-radius;
+    width: auto !important;
+  }
   &__container {
     display: flex;
     flex-direction: column;

@@ -12,12 +12,20 @@
     width: 1*$pebl-image-size-width + 2*$pebl-margin;
     margin: 0 auto;
   }
+  &__list-loading {
+    color: $black;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
   &__list-scroll {
     display: flex;
     flex-wrap: wrap;
   }
   &__pebl {
     box-sizing: border-box;
+    margin: $pebl-margin;
+    border-radius: $border-radius;
   }
 }
 

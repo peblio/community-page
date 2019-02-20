@@ -19,6 +19,7 @@ export function getPeblsFromTag(value, limit, offset) {
       const checkLimit = (totalNoPebls > limit * (offset + 1)) ? limit : totalNoPebls;
       response.data.docs.map((pebl, i) => {
         tempPebls.push({
+          description: pebl.description,
           id: pebl.id,
           title: pebl.title,
           tags: pebl.tags,

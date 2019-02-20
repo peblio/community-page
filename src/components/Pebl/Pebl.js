@@ -30,12 +30,31 @@ class Pebl extends Component {
 
   render() {
     return (
-      <div className="pebl__container">
+      <div className={`pebl__container pebl__container-${this.props.number}`}>
         <a
-          className="pebl__link"
+          className="pebl__link pebl__overlay"
           target="_blank"
           href={`https://demo.peblio.co/pebl/${this.props.id}`}
         >
+          <div>
+            <h1
+              className="pebl__overlay-title"
+            >
+              {this.props.title}
+            </h1>
+            <p
+            className="pebl__overlay-desc"
+            >
+              {this.props.description}
+            </p>
+          </div>
+          <p
+            className="pebl__overlay-author"
+          >
+            {this.state.userName}
+          </p>
+        </a>
+
           <img
             src="https://placekitten.com/200/150"
             className="pebl__image"
@@ -45,15 +64,19 @@ class Pebl extends Component {
           >
             {this.props.title}
           </h1>
+          <div className="pebl__info">
           <p
-            className="pebl__updated"
+            className="pebl__sub-info"
           >
           {this.state.userName}
-          Last Update
-            {' '}
+          </p>
+          <p
+            className="pebl__sub-info"
+          >
             {moment(this.props.updatedAt).format('DD/MMM/YYYY')}
           </p>
-        </a>
+          </div>
+
       </div>
     );
   }
