@@ -15,6 +15,7 @@ $pebl-colors: $border-yellow, $border-pink, $border-green, $border-blue;
     border-radius: $border-radius;
     padding: 0 $medium-padding;
     box-sizing: border-box;
+    text-decoration: none;
     &-title {
       color: $white;
       font-size: $medium-font;
@@ -22,6 +23,7 @@ $pebl-colors: $border-yellow, $border-pink, $border-green, $border-blue;
       line-height: $medium-line-height;
       font-weight: 800;
       text-align: left;
+      overflow: hidden;
     }
     &-desc {
       font-size: $small-font;
@@ -29,6 +31,8 @@ $pebl-colors: $border-yellow, $border-pink, $border-green, $border-blue;
       line-height: $small-line-height;
       text-align: left;
       font-weight: 600;
+      height: $pebl-image-size-height;
+      overflow: hidden;
     }
     &-author {
       font-size: $small-font;
@@ -73,6 +77,7 @@ $pebl-colors: $border-yellow, $border-pink, $border-green, $border-blue;
     padding: 0 $small-padding;
     font-weight: 600;
     text-align: left;
+    overflow: hidden;
   }
   &__tag-list {
     display: flex;

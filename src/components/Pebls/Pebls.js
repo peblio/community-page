@@ -55,19 +55,27 @@ class Pebls extends Component {
 
   renderPebls(studioPebls) {
     return (
-      <ul className="pebls__list">
+      <ul
+        className="pebls__list"
+        id="pebls__list"
+        >
       <InfiniteScroll
           className="pebls__list-scroll"
-          dataLength={this.props.totalPebls}
-          next={this.fetchMoreData}
-          hasMore={true}
-          loader={<h4>Loading...</h4>}
+          dataLength={this.props.studioPebls.length}
+          next={()=>{
+            this.fetchMoreData();
+          }}
+          hasMore={this.props.studioPebls.length<this.props.totalPebls}
+          loader={<h4 className="pebls__list-loading">Loading more pebls!</h4>}
           endMessage={
-            <p style={{textAlign: 'center'}}>
-              <b>Yay! You have seen it all</b>
-            </p>
+            <a
+            className="pebl__list-end"
+            href="#pebls__list"
+            >
+              Back to top
+            </a>
           }
-          height={window.innerHeight*0.8}
+          scrollThreshold={"200px"}
         >
         {studioPebls.map((pebl, i) =>  {
           return(
