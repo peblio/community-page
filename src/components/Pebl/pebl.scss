@@ -46,10 +46,23 @@ $pebl-colors: $border-yellow, $border-pink, $border-green, $border-blue;
     box-shadow:0 0px 7px rgba(0, 0, 0, 0.3);
     position: relative;
     cursor: pointer;
+    border-top: $border-yellow $border-radius*1.5 solid;
     &:hover .pebl__overlay{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+    &-0 {
+      border-top: $border-yellow $border-radius*1.5 solid;
+    }
+    &-1 {
+      border-top: $border-pink $border-radius*1.5 solid;
+    }
+    &-2 {
+      border-top: $border-green $border-radius*1.5 solid;
+    }
+    &-3 {
+      border-top: $border-blue $border-radius*1.5 solid;
     }
   }
   &__title {
@@ -87,14 +100,14 @@ $pebl-colors: $border-yellow, $border-pink, $border-green, $border-blue;
   }
 }
 
-@for $i from 1 through length($pebl-colors) {
-    .pebls__pebl:nth-child(#{length($pebl-colors)}n+#{$i}) {
-        border-top: nth($pebl-colors, $i) $border-radius*1.5 solid;
-    }
-}
-
-@for $i from 1 through length($pebl-colors) {
-    .featured-pebls__pebl:nth-child(#{length($pebl-colors)}n+#{$i}) {
-        border-top: nth($pebl-colors, $i) $border-radius*1.5 solid;
-    }
-}
+// @for $i from 1 through length($pebl-colors) {
+//     .pebls__pebl:nth-child(#{length($pebl-colors)}n+#{$i}) {
+//
+//     }
+// }
+//
+// @for $i from 1 through length($pebl-colors) {
+//     .featured-pebls__pebl:nth-child(#{length($pebl-colors)}n+#{$i}) {
+//         border-top: nth($pebl-colors, $i) $border-radius*1.5 solid;
+//     }
+// }

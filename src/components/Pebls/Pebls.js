@@ -84,6 +84,7 @@ class Pebls extends Component {
                 id={pebl.id}
                 user={pebl.user}
                 description={pebl.description}
+                number={i%4}
               />
             </li>
           )}

@@ -30,7 +30,7 @@ class Pebl extends Component {
 
   render() {
     return (
-      <div className="pebl__container">
+      <div className={`pebl__container pebl__container-${this.props.number}`}>
         <a
           className="pebl__link pebl__overlay"
           target="_blank"
