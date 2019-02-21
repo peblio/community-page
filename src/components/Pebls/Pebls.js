@@ -69,7 +69,7 @@ class Pebls extends Component {
           loader={<h4 className="pebls__list-loading">Loading more pebls!</h4>}
           endMessage={
             <a
-            className="pebl__list-end"
+            className="pebls__list-end"
             href="#pebls__list"
             >
               Back to top
