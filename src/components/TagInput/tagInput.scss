@@ -1,5 +1,7 @@
 @import '../../styles/variables';
 
+$colors: $tag-yellow, $tag-pink, $tag-blue, $tag-green;
+
 .tag-input {
   &__sub-container {
     position: relative;
@@ -36,6 +38,7 @@
     color: $black;
     width: 60%;
     margin: $small-margin auto;
+    margin-top: $large-margin;
     font-weight: 600;
     justify-content: flex-start;
     padding: $large-padding*2 $medium-padding $medium-padding;
@@ -47,6 +50,9 @@
     &__input {
       width: 0.8*(2*$pebl-image-size-width + 4*$pebl-margin);
     }
+      &__sug-tag-container {
+        width: 0.8*(2*$pebl-image-size-width + 4*$pebl-margin);
+      }
   }
 }
 
@@ -55,6 +61,9 @@
     &__input {
       width: 0.8*(4*$pebl-image-size-width + 8*$pebl-margin);
     }
+      &__sug-tag-container {
+        width: 0.8*(4*$pebl-image-size-width + 8*$pebl-margin);
+      }
   }
 }
 
@@ -63,5 +72,15 @@
     &__input {
       width: 0.8*(5*$pebl-image-size-width + 10*$pebl-margin);
     }
+      &__sug-tag-container {
+        width: 0.8*(5*$pebl-image-size-width + 10*$pebl-margin);
+      }
   }
+}
+
+
+@for $i from 1 through length($colors) {
+    .tag-input__sug-tag-button:nth-child(#{length($colors)}n+#{$i}) {
+        background: nth($colors, $i)
+    }
 }

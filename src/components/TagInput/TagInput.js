@@ -15,6 +15,10 @@ class TagInput extends Component {
       this.props.setTagName(e.target.value);
     }
   }
+  trySugTag=(e)=>{
+      this.props.setTagName(e.target.innerText);
+      this.fileUpload.value = e.target.innerText;
+  }
 
   render() {
     return (
@@ -29,7 +33,48 @@ class TagInput extends Component {
           type="text"
           placeholder="enter tags..."
           onKeyPress={this.handleKeyPress}
+          ref={(input) => { this.fileUpload = input; }}
         />
+        </div>
+        <div
+        className="tag-input__sug-tag-container"
+        >
+          <p
+            className="tag-input__sub-title"
+          >
+            Suggested Tags
+          </p>
+          <ul className="tag-input__sug-tags">
+
+            <button
+            onClick={this.trySugTag}
+            className="tag-input__sug-tag-button"
+            >
+              p5.js
+            </button>
+
+            <button
+            onClick={this.trySugTag}
+            className="tag-input__sug-tag-button"
+            >
+              python
+            </button>
+
+
+            <button
+            onClick={this.trySugTag}
+            className="tag-input__sug-tag-button"
+            >
+              beginner
+            </button>
+
+            <button
+            onClick={this.trySugTag}
+            className="tag-input__sug-tag-button"
+            >
+              scratch
+            </button>
+          </ul>
         </div>
       </div>
     );
