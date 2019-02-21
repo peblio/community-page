@@ -16,8 +16,6 @@ class TagInput extends Component {
     }
   }
   trySugTag=(e)=>{
-    // debugger;
-    // console.log(e.target.value)
       this.props.setTagName(e.target.innerText);
       this.fileUpload.value = e.target.innerText;
   }
