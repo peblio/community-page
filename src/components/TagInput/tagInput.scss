@@ -43,6 +43,16 @@ $colors: $tag-yellow, $tag-pink, $tag-blue, $tag-green;
     justify-content: flex-start;
     padding: $large-padding*2 $medium-padding $medium-padding;
   }
+  &__sug-tag-container{
+    margin: auto auto;
+  }
+  &__sug-tag-button{
+    margin: $small-margin;
+    border-radius: $border-radius;
+  }
+  &__sug-tags{
+    margin: 0;
+  }
 }
 
 @media only screen and (min-width: 768px) {

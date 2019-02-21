@@ -45,6 +45,9 @@
 .slick-dots {
   display: none !important;
 }
+.slick-track {
+  padding: $medium-padding;
+}
 
 @media only screen and (min-width: 550px) {
   .slick-slider, .featured__sub-container {

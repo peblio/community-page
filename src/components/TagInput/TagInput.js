@@ -22,7 +22,7 @@ class TagInput extends Component {
 
   render() {
     return (
-      <div className="tag-input__container">
+      <div className="tag-input__container" id="pebls__list">
       <p className="tag-input__title">
         Search for Resources
       </p>
@@ -39,11 +39,6 @@ class TagInput extends Component {
         <div
         className="tag-input__sug-tag-container"
         >
-          <p
-            className="tag-input__sub-title"
-          >
-            Suggested Tags
-          </p>
           <ul className="tag-input__sug-tags">
 
             <button
