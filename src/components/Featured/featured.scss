@@ -6,11 +6,15 @@
     border-radius: $border-radius;
     width: auto !important;
   }
+  &-profiles__profile{
+    padding: $medium-padding;
+  }
   &__container {
     display: flex;
     flex-direction: column;
     background: $offwhite;
     width: 100%;
+    padding-bottom: $medium-padding;
   }
   &__sub-container {
     width: 1*$pebl-image-size-width + 2*$pebl-margin;
@@ -21,9 +25,9 @@
     margin: 0;
   }
   &__heading {
-    font-size: $large-font;
+    font-size: $subheading-font;
     color: $black;
-    padding: $small-padding 0;
+    padding: $medium-padding 0;
     margin-bottom: 0;
     margin-top: $large-padding*2;
   }

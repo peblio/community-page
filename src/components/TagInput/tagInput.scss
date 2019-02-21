@@ -20,23 +20,25 @@
   &__input {
     list-style: none;
     padding: 0;
-    width: 0.8*(1*$pebl-image-size-width + 2*$pebl-margin);
+    // width: 0.8*(1*$pebl-image-size-width + 2*$pebl-margin);
     background: $lightgrey;
     height: $medium-line-height;
     padding: $small-padding;
     padding-left: $medium-line-height*2;
     border-radius: $border-radius;
     border: none;
+    width: 1*$pebl-image-size-width + 2*$pebl-margin;
+    margin: 0 auto;
   }
   &__title {
-    font-size: $medium-font;
-    text-transform: uppercase;
-    color: $white;
+    font-size: $large-font;
+    text-align: center;
+    color: $black;
     width: 60%;
     margin: $small-margin auto;
     font-weight: 600;
-    display: flex;
     justify-content: flex-start;
+    padding: $large-padding*2 $medium-padding $medium-padding;
   }
 }
 

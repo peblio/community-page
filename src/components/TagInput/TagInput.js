@@ -19,10 +19,8 @@ class TagInput extends Component {
   render() {
     return (
       <div className="tag-input__container">
-      <p
-        className="tag-input__title"
-      >
-        Search for resources
+      <p className="tag-input__title">
+        Search for Resources
       </p>
       <div className="tag-input__sub-container">
         <i class="fa fa-search tag-input__icon" aria-hidden="true"></i>
