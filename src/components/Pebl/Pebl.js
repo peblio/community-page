@@ -56,7 +56,7 @@ class Pebl extends Component {
         </a>
 
           <img
-            src="https://placekitten.com/200/150"
+            src="https://s3.amazonaws.com/peblio-files-staging/Snapshots/YOSV4ls3U.png"
             className="pebl__image"
           />
           <h1
