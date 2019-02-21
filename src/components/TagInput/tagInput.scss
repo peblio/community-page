@@ -1,5 +1,7 @@
 @import '../../styles/variables';
 
+$colors: $tag-yellow, $tag-pink, $tag-blue, $tag-green;
+
 .tag-input {
   &__sub-container {
     position: relative;
@@ -30,13 +32,43 @@
   }
   &__title {
     font-size: $medium-font;
-    text-transform: uppercase;
-    color: $white;
+    color: $black;
     width: 60%;
     margin: $small-margin auto;
+    margin-top: $large-margin;
     font-weight: 600;
+  }
+  &__sub-title {
+    font-size: $small-font;
+    color: $grey;
+    text-transform: uppercase;
+  }
+  &__sug-tag-container {
     display: flex;
-    justify-content: flex-start;
+    margin: 0 auto;
+  }
+  &__sug-tags {
+    display: flex;
+    margin: $small-margin;
+    padding: 0;
+  }
+
+  &__sug-tag-button {
+    font-size: $small-font;
+    color: $darkgrey;
+    list-style: none;
+    font-size: $small-font;
+    color: $darkgrey;
+    border: none;
+    list-style: none;
+    display: flex;
+    height: fit-content;
+    border-radius: $border-radius;
+    padding: $small-padding/2;
+    font-weight: 300;
+    margin-right: $medium-margin;
+    margin-bottom: $small-margin;
+    cursor: pointer;
   }
 }
 
@@ -45,6 +77,9 @@
     &__input {
       width: 0.8*(2*$pebl-image-size-width + 4*$pebl-margin);
     }
+      &__sug-tag-container {
+        width: 0.8*(2*$pebl-image-size-width + 4*$pebl-margin);
+      }
   }
 }
 
@@ -53,6 +88,9 @@
     &__input {
       width: 0.8*(4*$pebl-image-size-width + 8*$pebl-margin);
     }
+      &__sug-tag-container {
+        width: 0.8*(4*$pebl-image-size-width + 8*$pebl-margin);
+      }
   }
 }
 
@@ -61,5 +99,15 @@
     &__input {
       width: 0.8*(5*$pebl-image-size-width + 10*$pebl-margin);
     }
+      &__sug-tag-container {
+        width: 0.8*(5*$pebl-image-size-width + 10*$pebl-margin);
+      }
   }
+}
+
+
+@for $i from 1 through length($colors) {
+    .tag-input__sug-tag-button:nth-child(#{length($colors)}n+#{$i}) {
+        background: nth($colors, $i)
+    }
 }
