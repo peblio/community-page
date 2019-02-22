@@ -8,6 +8,7 @@
     &:hover {
       width: $pebl-image-size-width;
       // margin: calc(#{$pebl-margin} - 10px);
+      margin: 15px;
     }
     &:hover .profile__image{
       width: $pebl-image-size-width;
