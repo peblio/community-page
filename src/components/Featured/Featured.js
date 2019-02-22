@@ -26,7 +26,10 @@ class Featured extends Component {
           <Collection
             key={`collection-${i}`}
             title={collection.title}
-            id={collection.id}
+            link={collection.link}
+            desc={collection.desc}
+            author={collection.author}
+            noFiles={collection.noFiles}
           />
         </li>
       );
@@ -67,8 +70,7 @@ class Featured extends Component {
           <Profile
             key={`profile-${i}`}
             name={profile.name}
-            // updatedAt={pebl.updatedAt}
-            id={profile.id}
+            link={profile.link}
             image={profile.image}
           />
         </li>
