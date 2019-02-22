@@ -6,6 +6,15 @@
     border-radius: $border-radius;
     width: auto !important;
   }
+  &-collections__collection {
+    margin: $pebl-margin;
+    border-radius: $border-radius;
+    width: auto !important;
+  }
+  &-profiles__profile {
+    border-radius: $border-radius;
+    width: auto !important;
+  }
   &__container {
     display: flex;
     flex-direction: column;
