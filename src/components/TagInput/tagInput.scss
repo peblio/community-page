@@ -22,53 +22,36 @@ $colors: $tag-yellow, $tag-pink, $tag-blue, $tag-green;
   &__input {
     list-style: none;
     padding: 0;
-    width: 0.8*(1*$pebl-image-size-width + 2*$pebl-margin);
+    // width: 0.8*(1*$pebl-image-size-width + 2*$pebl-margin);
     background: $lightgrey;
     height: $medium-line-height;
     padding: $small-padding;
     padding-left: $medium-line-height*2;
     border-radius: $border-radius;
     border: none;
+    width: 1*$pebl-image-size-width + 2*$pebl-margin;
+    margin: 0 auto;
   }
   &__title {
-    font-size: $medium-font;
+    font-size: $large-font;
+    text-align: center;
     color: $black;
     width: 60%;
     margin: $small-margin auto;
     margin-top: $large-margin;
     font-weight: 600;
+    justify-content: flex-start;
+    padding: $large-padding*2 $medium-padding $medium-padding;
   }
-  &__sub-title {
-    font-size: $small-font;
-    color: $grey;
-    text-transform: uppercase;
+  &__sug-tag-container{
+    margin: auto auto;
   }
-  &__sug-tag-container {
-    display: flex;
-    margin: 0 auto;
-  }
-  &__sug-tags {
-    display: flex;
+  &__sug-tag-button{
     margin: $small-margin;
-    padding: 0;
-  }
-
-  &__sug-tag-button {
-    font-size: $small-font;
-    color: $darkgrey;
-    list-style: none;
-    font-size: $small-font;
-    color: $darkgrey;
-    border: none;
-    list-style: none;
-    display: flex;
-    height: fit-content;
     border-radius: $border-radius;
-    padding: $small-padding/2;
-    font-weight: 300;
-    margin-right: $medium-margin;
-    margin-bottom: $small-margin;
-    cursor: pointer;
+  }
+  &__sug-tags{
+    margin: 0;
   }
 }
 

@@ -32,10 +32,11 @@
   &__container {
     position: relative;
     background: $white;
-    width: $pebl-image-size-width;
+    width: $pebl-collection-size-width;
+    height: $pebl-collection-size-height;
     border-radius: $border-radius;
     -webkit-box-shadow:0 0px 7px rgba(0, 0, 0, 0.3);
-    box-shadow:0 0px 7px rgba(0, 0, 0, 0.3);
+    box-shadow:0 3px 10px rgba(0, 0, 0, 0.3);
     border-left: $blue $border-radius*1.5 solid;
     &:hover .collection__overlay{
       display: flex;
