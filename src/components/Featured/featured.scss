@@ -28,7 +28,8 @@
     margin: 0 auto;
   }
   &__list {
-    padding: 0 $large-padding;
+    padding: 0;
+    padding-right: 3rem;
     margin: 0;
   }
   &__heading {
