@@ -28,59 +28,80 @@ export const PROFILES = [
 
 export const PEBLS = [
   {
-    title: 'Intro to ML5 - Feature Extraction',
-    id: 'l315usow-',
-    description: 'this is an awesome project, yay! actually let me tell you something else, this project is not only awesome, its amazing! BAMAZING I SAY'
+    title: 'Conditionals in p5',
+    id: 'tRjKdMW8M'
   },
   {
-    title: 'Intro to ML5-1 - Feature Extraction',
-    id: 'l315usow-',
-    description: 'this is an awesome project, yay!'
+    title: 'Servo motors with microbit ',
+    id: 'zYgqUwiCm'
   },
   {
-    title: 'Intro to ML5-2 - Feature Extraction',
-    id: 'l315usow-',
-    description: 'this is an awesome project, yay!'
+    title: 'Egg toss game',
+    id: 'zwExp4TKl'
   },
   {
-    title: 'Intro to ML5-3 - Feature Extraction',
-    id: 'l315usow-',
-    description: 'this is an awesome project, yay!'
+    title: 'Micro:bit project template',
+    id: '5D9Xc9IEu'
   },
   {
-    title: 'Intro to ML5 - Feature Extraction',
-    id: 'l315usow-',
-    description: 'this is an awesome project, yay!'
+    title: 'Tutorial template',
+    id: 'mWNJy5JY-'
   },
   {
-    title: 'Intro to ML5 - Feature Extraction',
-    id: 'l315usow-',
-    description: 'this is an awesome project, yay!'
+    title: 'P5 functions',
+    id: 'Pd5T2Y6sx'
   },
   {
-    title: 'Intro to ML5 - Feature Extraction',
-    id: 'l315usow-',
-    description: 'this is an awesome project, yay!'
+    title: 'Challenge: Draw a Taijitu',
+    id: '6q6wRo7Ry'
   },
   {
-    title: 'Intro to ML5 - Feature Extraction',
-    id: 'l315usow-',
-    description: 'this is an awesome project, yay!'
+    title: 'While loops',
+    id: 'zayMu9boY'
   },
   {
-    title: 'Intro to ML5 - Feature Extraction',
-    id: 'l315usow-',
-    description: 'this is an awesome project, yay!'
+    title: 'While loop challenge',
+    id: 'T5vqMKfNt'
   },
   {
-    title: 'Intro to ML5 - Feature Extraction',
-    id: 'l315usow-',
-    description: 'this is an awesome project, yay!'
+    title: 'For loops',
+    id: 'L0uPNW4DV'
   },
   {
-    title: 'Intro to ML5 - Feature Extraction',
-    id: 'l315usow-',
-    description: 'this is an awesome project, yay!'
+    title: 'Mouse challenge',
+    id: 'uSWSGi6hD'
+  },
+  {
+    title: 'Button game',
+    id: 'yLtrSXW1V'
+  },
+  {
+    title: 'Bouncing ball',
+    id: '81S_KPYR9'
+  },
+  {
+    title: 'Catching game',
+    id: 'cy3xvQGKv'
+  },
+  {
+    title: 'Rothko',
+    id: 'baDa6USS2'
+  },
+  {
+    title: 'Minimalist designs',
+    id: 'pcGiG3vJF'
+  },
+  {
+    title: 'Drawing app',
+    id: 'Muth86erj'
+  },
+  {
+    title: 'Gen design',
+    id: 'xtShIBrtc'
+  },
+  {
+    title: 'Game design',
+    id: 'oqwx-4Zz7'
   }
 ];
 

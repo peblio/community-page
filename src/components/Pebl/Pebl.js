@@ -9,12 +9,34 @@ class Pebl extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userName: ''
+      userName: '',
+      description: '',
+      updatedAt: '',
+      image: 'https://s3.amazonaws.com/peblio-files/_Pebl_Snapshots/ACNgem3Mx.png'
     };
   }
 
   componentDidMount() {
-    this.getPeblAuthor(this.props.id);
+    const pageId = this.props.id;
+    this.getPeblAuthor(pageId);
+    this.getPeblDetails(pageId);
+  }
+
+  getPeblDetails = (pageId) => {
+    const url = `https://api.peblio.co/api/pages/${pageId}`;
+    axios.get(url)
+      .then((response) => {
+        if(response.data[0]){
+          this.setState({description: response.data[0].description})
+          this.setState({updatedAt: response.data[0].updatedAt})
+          if(response.data[0].snapshotPath) {
+            this.setState({image: response.data[0].snapshotPath})
+          }
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   getPeblAuthor = (pageId) => {
@@ -45,7 +67,7 @@ class Pebl extends Component {
             <p
             className="pebl__overlay-desc"
             >
-              {this.props.description}
+              {this.state.description}
             </p>
           </div>
           <p
@@ -56,7 +78,7 @@ class Pebl extends Component {
         </a>
 
           <img
-            src="https://s3.amazonaws.com/peblio-files-staging/Snapshots/YOSV4ls3U.png"
+            src={this.state.image}
             className="pebl__image"
           />
           <h1
@@ -73,7 +95,7 @@ class Pebl extends Component {
           <p
             className="pebl__sub-info"
           >
-            {moment(this.props.updatedAt).format('DD/MMM/YYYY')}
+            {moment(this.state.updatedAt).format('DD/MMM/YYYY')}
           </p>
           </div>
 
