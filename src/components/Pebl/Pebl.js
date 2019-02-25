@@ -12,7 +12,7 @@ class Pebl extends Component {
       userName: '',
       description: '',
       updatedAt: '',
-      image: 'https://s3.amazonaws.com/peblio-files/_Pebl_Snapshots/ACNgem3Mx.png'
+      image: 'https://s3.amazonaws.com/peblio-files/_Pebl_Snapshots/default.png'
     };
   }
 
