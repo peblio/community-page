@@ -1,71 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Peblio Community Site
 
-## Available Scripts
+This is the repo containing the code for the Peblio community site. If you are looking for the app, please go the [app repo](https://github.com/peblio/app)
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+* [What is Peblio?](#what-is-peblio)
+* [Get Started](#get-started)
+* [Examples](#examples)
+* [Contributing](#contributing)
+* [License](#license)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What is Peblio
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+<img width="100" alt="peblio screenshot" src="https://user-images.githubusercontent.com/5505598/46600370-93d1a600-cb07-11e8-8543-89d00fc86732.png">
 
-### `npm test`
+[Peblio](https://www.peblio.co/) is an instructional tool and lesson sharing platform for middle and high school Computer Science teachers. The goal is to democratize quality instructional materials and provide CS teachers with a streamlined workflow for finding and adapting lessons and managing student work.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img width="806" alt="peblio screenshot" src="https://user-images.githubusercontent.com/5505598/46600399-ac41c080-cb07-11e8-9de6-a79d9bd334e3.png">
 
-### `npm run build`
+### Get Started
+* Here are some [resources to get started](https://www.peblio.co/#posts)
+* To start using Peblio, visit the [demo website](https://demo.peblio.co/).
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Examples
+Peblio can be used to create computer science lessons and instructions in various formats - lesson plans, worksheets, project documentation or tutorials.
+Below are some examples on how Peblio can be used.
+* [Examples of how p5 is used to recreate famous paintings](https://demo.peblio.co/pebl/7b9CH9fYT)
+* [Curriculum on introduction to web developement](https://demo.peblio.co/user/CT-CSTA/folder/Hkc7ke1Cgw7)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+All contributions are welcome.
+We are especially always happy to have more tutorials and worksheets for our teachers and students to use! To create your own content, please [check out Peblio Community site](https://www.peblio.co/).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Here are the basic steps to install Peblio Community site in you local machine. For more detailed instructions, check out the [developer docs](/developer_docs/README.md).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-## References
-* [Setup React and Redux app](https://medium.com/backticks-tildes/setting-up-a-redux-project-with-create-react-app-e363ab2329b8)
+## License
+Peblio is licensed under the GNU General Public License, Version 3.0. See [LICENSE.md](/LICENSE.md) for the full license text.
