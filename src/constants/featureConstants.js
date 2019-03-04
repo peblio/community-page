@@ -16,12 +16,12 @@ export const PROFILES = [
   },
   {
     name: 'CT-CSTA',
-    link: 'https://demo.peblio.co/user/CS4ALL',
+    link: 'https://demo.peblio.co/user/CT-CSTA',
     image: 'https://s3.amazonaws.com/peblio-files/CT-CSTA/profile/HjLC1qGZ__conneticut.jpeg'
   },
   {
     name: 'CS4All',
-    link: 'https://demo.peblio.co/user/Paper%20Crane%20Lab',
+    link: 'https://demo.peblio.co/user/CS4ALL',
     image: 'https://s3.amazonaws.com/peblio-files/CS4ALL/profile/Bkg6Ea4Sm_CS4all_transparent-01.png'
   }
 ];
