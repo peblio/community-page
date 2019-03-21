@@ -12,12 +12,12 @@ ENVIRONMENT=$1
 
 if [ "$ENVIRONMENT" = "staging" ]; then
   BUILD_COMMAND='npm run build'
-  S3_BUCKET="s3://communitystaging.peblio.co"
+  S3_BUCKET="s3://community-staging.peblio.co"
   DIST_ID="E9ENZDAFIVF1G"
 elif [ "$ENVIRONMENT" = "production" ]; then
   BUILD_COMMAND='npm run build'
-  S3_BUCKET="s3://communitystaging.peblio.co"
-  DIST_ID="E9ENZDAFIVF1G"
+  S3_BUCKET="s3://peblio.co"
+  DIST_ID="E22CSEPY0FLQAG"
 else
   echo "$ENVIRONMENT is not a valid deployment environment."
   exit 1
