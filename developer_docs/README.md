@@ -42,15 +42,23 @@ The expected git workflow for feature development is:
 
 ## Deploying
 
-The current deployment process is manual. We run the build command and upload the build files on our S3 bucket'
-**Build command** `npm run build`
+The frontend uses the [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/) to push the latest build to S3 and invalidate the corresponding CloudFront cache.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Staging
 
-The build is minified and the filenames include the hashes.<br>
+```
+git checkout staging
+cd client
+./devops/staging_deploy.sh
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Production
+
+```
+git checkout master
+cd client
+./devops/prod_deploy.sh
+```
 
 
 ## How we set it up
