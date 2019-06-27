@@ -26,9 +26,11 @@ class Home extends Component {
           {!this.props.name &&
             <Featured />
           }
-          {this.props.name &&
-            <Pebls />
-          }
+          {this.props.name && (
+            <Pebls
+              container="home"
+            />
+          )}
           <Contact />
         </header>
       </div>

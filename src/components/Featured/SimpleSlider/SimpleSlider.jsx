@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import Collection from '../../Collection/Collection';
 
 export default class SimpleSlider extends Component {
   render() {
@@ -40,7 +39,7 @@ export default class SimpleSlider extends Component {
             slidesToShow: 2,
             slidesToScroll: 1,
           }
-        },,
+        },
         {
           breakpoint: 550,
           settings: {

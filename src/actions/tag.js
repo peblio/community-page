@@ -10,8 +10,8 @@ export function setTagName(value) {
   };
 }
 
-export function getPeblsFromTag(value, limit, offset) {
-  const url = `https://api.peblio.co/api/pages/withTags?tag=${value}&limit=${limit}&offset=${offset}`;
+export function getPeblsFromTag(value, limit, offset, withStudents) {
+  const url = `https://api.peblio.co/api/pages/withTags?tag=${value}&limit=${limit}&offset=${offset}&showStudentPages=${withStudents}`;
   const tempPebls = [];
   return dispatch => axios.get(url)
     .then((response) => {

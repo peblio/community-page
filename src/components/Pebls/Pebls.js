@@ -18,7 +18,8 @@ class Pebls extends Component {
     this.state = {
       pebls: [],
       offset: 0,
-      pageLimit:11
+      pageLimit:11,
+      withStudents: false
     };
   }
 
@@ -29,15 +30,23 @@ class Pebls extends Component {
   }
   retrievePeblsWithTag=(tag) =>{
     this.props.setTagName(tag);
-    this.props.getPeblsFromTag(tag, this.state.pageLimit, 0);
+    this.props.getPeblsFromTag(tag, this.state.pageLimit, 0,this.state.withStudents);
     this.increasePageOffset();
     this.setState({
       offset:this.state.pageLimit
     })
   }
 
+  setPeblsPermissions=()=> {
+    if(this.props.container ==='studio') {
+      this.setState({
+        withStudents: true
+      })
+    }
+  }
+
   fetchMoreData = () => {
-    this.props.getPeblsFromTag(this.props.tagName, this.state.pageLimit, this.state.offset);
+    this.props.getPeblsFromTag(this.props.tagName, this.state.pageLimit, this.state.offset, this.state.withStudents);
     this.increasePageOffset();
   }
 
@@ -49,6 +58,7 @@ class Pebls extends Component {
   }
 
   componentWillMount() {
+    this.setPeblsPermissions();
     this.retrievePeblsWithTag(this.props.tagName);
   }
 
@@ -106,7 +116,6 @@ class Pebls extends Component {
   render() {
     return (
       <div className="studio__container">
-        {this.props.tagName}
         <div className="studio__pebls">
           {this.renderPebls(this.props.studioPebls)}
         </div>
