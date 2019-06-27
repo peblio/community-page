@@ -12,9 +12,19 @@ import TagInput from '../../components/TagInput/TagInput';
 require('./studio.scss');
 
 class Studio extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tagName: 'tag'
+    };
+  }
+
   componentDidMount() {
     const tempTag = this.props.match.params.tag;
     this.props.setTagName(tempTag);
+    this.setState({
+      tagName: tempTag
+    });
   }
 
   render() {
@@ -22,7 +32,12 @@ class Studio extends Component {
       <div>
         <Nav />
         <div className="studio__container">
-          <Pebls />
+          <h1 className="studio__heading">
+            {this.state.tagName}
+          </h1>
+          <Pebls
+            container="studio"
+          />
         </div>
       </div>
     );
