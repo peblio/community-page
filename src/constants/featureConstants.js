@@ -107,6 +107,13 @@ export const PEBLS = [
 
 export const COLLECTIONS = [
   {
+    title: 'The Physics of Video Games',
+    link: 'https://demo.peblio.co/profile/stemcoding/folder/rkhHW1iXH',
+    author: 'STEMcoding',
+    desc: `Let's reimagine intro STEM courses with computer science in mind!`,
+    noFiles: 3
+  }
+  {
     title: 'HTML/CSS',
     link: 'https://demo.peblio.co/profile/CT-CSTA/folder/Hkc7ke1Cgw7',
     author: 'CT-CSTA',
