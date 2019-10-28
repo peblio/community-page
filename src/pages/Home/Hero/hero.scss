@@ -3,8 +3,10 @@
 /*TEXT*/
 .hero {
   &__container {
-    height: 80%;
-    padding-top: 150px;
+    //TODO : Make it a percentage value so that its responsive
+    // height: 80%;
+    height: 600px;
+    padding-top: $large-padding;
     background: $black;
     width: 100%;
     display: flex;
@@ -116,4 +118,17 @@
   .hero__container {
     flex-direction: row;
   }
+}
+
+.slick-arrow {
+  color: blue;
+  background: red;
+}
+
+.slick-slider {
+  //TODO : make the slider the full width of the carousel
+  // height: 100%;
+  // width: 100%;
+  // position: absolute;
+  margin: 0 $large-margin;
 }
