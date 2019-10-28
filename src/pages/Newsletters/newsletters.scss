@@ -6,6 +6,7 @@
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
+    padding-top: 10%;
   }
   &__heading {
     font-size: $large-font;
@@ -31,6 +32,14 @@
     width: 80%;
     margin: 0 auto;
     padding: $medium-padding 0;
+  }
+}
+
+.newsletter-menu {
+  &__container {
+    position: fixed;
+    width: 100%;
+    background: $white;
   }
 }
 

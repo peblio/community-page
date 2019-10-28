@@ -27,60 +27,90 @@ class Newsletters extends Component {
       });
   }
 
+  getNewslettersMenu() {
+
+  }
+
   render() {
     return (
-      <div className="newsletters__container">
-        <h1 className="newsletters__heading"> Newsletters </h1>
-        {
-          this.state.newsletters.map((nl, i) => (
-            <div className="newsletter__container">
-              <h2 className="newsletter__heading">
+      <div>
+        <nav
+          className="newsletter-menu__container"
+        >
+          <ul className="newsletter-menu__items">
+            {this.state.newsletters.map((nl, i) => (
+              <li>
+                <a href={`#newsletter-${i}`}>
+                Vol
+                  {' '}
+                  {nl.volume}
+                  {' '}
+                |
+                  {' '}
+                  {nl.month}
+                  {' '}
+                  {nl.year}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className="newsletters__container">
+          <h1 className="newsletters__heading"> Newsletters </h1>
+          {
+            this.state.newsletters.map((nl, i) => (
+              <div
+                className="newsletter__container"
+                id={`newsletter-${i}`}
+              >
+                <h2 className="newsletter__heading">
               Vol
-                {' '}
-                {nl.volume}
-                {' '}
+                  {' '}
+                  {nl.volume}
+                  {' '}
               |
-                {' '}
-                {nl.month}
-                {' '}
-                {nl.year}
-              </h2>
-              <p>
-                {nl.intro}
-              </p>
-              {
-                nl.articles.map(article => (
-                  <div className="article__container">
-                    <div className="article__text-container">
-                      <h3 className="article__heading">
-                        {' '}
-                        {article.heading}
-                        {' '}
-                      </h3>
-                      <p className="article__para">
-                        {' '}
-                        {article.para}
-                        {' '}
-                      </p>
-                      <a
-                        className="article__link"
-                        href={article.link}
-                      >
-                        {article.linkText}
-                      </a>
+                  {' '}
+                  {nl.month}
+                  {' '}
+                  {nl.year}
+                </h2>
+                <p>
+                  {nl.intro}
+                </p>
+                {
+                  nl.articles.map(article => (
+                    <div className="article__container">
+                      <div className="article__text-container">
+                        <h3 className="article__heading">
+                          {' '}
+                          {article.heading}
+                          {' '}
+                        </h3>
+                        <p className="article__para">
+                          {' '}
+                          {article.para}
+                          {' '}
+                        </p>
+                        <a
+                          className="article__link"
+                          href={article.link}
+                        >
+                          {article.linkText}
+                        </a>
+                      </div>
+                      {article.image && (
+                        <img
+                          className="article__image"
+                          src={article.image}
+                        />
+                      )}
                     </div>
-                    {article.image && (
-                      <img
-                        className="article__image"
-                        src={article.image}
-                      />
-                    )}
-                  </div>
-                ))
-              }
-            </div>
-          ))
-        }
+                  ))
+                }
+              </div>
+            ))
+          }
+        </div>
       </div>
     );
   }
