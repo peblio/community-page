@@ -9,30 +9,106 @@ import Slider from 'react-slick';
 require('./hero.scss');
 
 class Hero extends Component {
+  test() {
+    debugger;
+  }
+
   render() {
     const settings = {
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 5000,
       dots: true,
       infinite: true,
-      speed: 50,
+      speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1
     };
     return (
       <div className="hero__container">
-        <Slider {...settings}>
-          <div>
-            <img
-              className="hero__image"
-              src="https://placekitten.com/300/300"
-            />
-          </div>
-          <div>
-            <img
-              className="hero__image"
-              src="https://placekitten.com/400/300"
-            />
-          </div>
-        </Slider>
+        <div className="hero-menu__container">
+          <ul className="hero-menu__list">
+            <li className="hero-menu__list-item">
+              <button
+                className="hero-menu__button"
+                onClick={() => { this.slider.slickGoTo(0); }}
+              >
+              Welcome
+              </button>
+            </li>
+            <li className="hero-menu__list-item">
+              <button
+                className="hero-menu__button"
+                onClick={() => { this.slider.slickGoTo(1); }}
+              >
+              New Curriculum
+              </button>
+            </li>
+            <li className="hero-menu__list-item">
+              <button
+                className="hero-menu__button"
+                onClick={() => { this.slider.slickGoTo(2); }}
+              >
+              New Lessons
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div className="hero__slider-container">
+          <Slider ref={slider => (this.slider = slider)} {...settings}>
+            <div className="hero__slider">
+              <div className="hero__content">
+                <h1 className="hero__heading">
+                  heading
+                </h1>
+                <p className="hero__text">
+                Lorem ipsum
+                </p>
+                <a className="hero__button" href="#">
+                Learn More
+                </a>
+              </div>
+              <img
+                className="hero__image"
+                src="https://placekitten.com/300/300"
+              />
+            </div>
+            <div className="hero__slider">
+              <div className="hero__content">
+                <h1 className="hero__heading">
+                  heading 2
+                </h1>
+                <p className="hero__text">
+                Lorem ipsum 2
+                </p>
+                <a className="hero__button" href="#">
+                Learn More
+                </a>
+              </div>
+              <img
+                className="hero__image"
+                src="https://placekitten.com/300/300"
+              />
+            </div>
+            <div className="hero__slider">
+              <div className="hero__content">
+                <h1 className="hero__heading">
+                  heading 3
+                </h1>
+                <p className="hero__text">
+                Lorem ipsum 3
+                </p>
+                <a className="hero__button" href="#">
+                Learn More
+                </a>
+              </div>
+              <img
+                className="hero__image"
+                src="https://placekitten.com/300/300"
+              />
+            </div>
+          </Slider>
+        </div>
       </div>
     );
   }
