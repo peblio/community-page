@@ -75,10 +75,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    & li:not(:last-child) {
+      border-bottom: 2px solid $green;
+    }
   }
   &__list-item {
+    width: 100%;
     list-style: none;
-
+    padding: 1rem 0 ;
+    display: flex;
+    justify-content:flex-end;
   }
   &__container {
     display: flex;
