@@ -1,25 +1,66 @@
 @import '../../styles/variables';
 
 .newsletters {
+  &__hamburger {
+  }
+  &__hamburger--false .bm-menu-wrap {
+    display: none;
+  }
   &__container {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 10%;
+    width: 90%;
+    padding: 0 5%;
+    padding-top: 20%;
+    background: $black;
   }
   &__heading {
-    font-size: $large-font;
+    font-size: $small-font;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+  }
+  &__line {
+    margin: 0 auto;
+    background: $white;
+    width: 10%;
+    height: 2px;
+    border-radius: 2px;
+    border: none;
   }
 }
 
 .newsletter {
+  &__articles {
+    display: flex;
+    flex-direction: column;
+  }
+  &__button {
+    background: $green;
+    margin: $large-margin auto;
+    padding: $small-padding $medium-padding;
+    border-radius: 2px;
+    font-weight: 600;
+    color: $white;
+    text-decoration: none;
+  }
   &__container {
     display: flex;
     flex-direction: column;
   }
   &__heading {
     font-size: $large-font;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    margin: $small-margin 0;
+  }
+  &__intro {
+    text-align: center;
+    color: $white;
   }
 }
 
@@ -27,11 +68,30 @@
   &__container {
     display: flex;
     flex-direction: column;
+    background: $white;
+    margin: $large-margin 0;
+    padding-bottom: $medium-padding;
+    width: 100%;
   }
   &__image {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: $medium-padding 0;
+  }
+  &__list {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  &__list-item {
+    list-style: none;
+    margin: $small-margin 0;
+  }
+  &__text-container {
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -39,21 +99,126 @@
   &__container {
     position: fixed;
     width: 100%;
-    background: $white;
+    background: $black;
+    height: $nav-height;
+    top: 0;
+    display: flex;
   }
+  &__items {
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    list-style: none;
+  }
+  &__logo {
+    height: $nav-height/3;
+    margin: 10px auto;
+    align-items: center;
+    justify-content: center;
+  }
+  &__vol {
+    color: $white;
+    position: fixed;
+    right: 5%;
+    top: 20px;
+    margin: 0;
+  }
+  &__img{
+    height: 40px;
+  }
+  &__button {
+    border: 0;
+    cursor: pointer;
+    padding: $small-padding/2;
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: fit-content !important;
+  width: fit-content !important;
+  background: $white;
+  top: 50px;
+  padding: $small-padding;
+  left: 5%;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 30px;
+  height: 20px;
+  left: 5%;
+  top: 20px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #ffffff;
+}
+
+
+/* Color/shape of close button cross */
+.bm-cross {
+  display: none;
 }
 
 //desktop
 @media only screen and (min-width: 1024px) {
+  .newsletters {
+    &__container {
+      width: 60%;
+      padding: 0 20%;
+      padding-top: $nav-height;
+    }
+    &__line {
+      width: 5%;
+    }
+  }
+  .newsletter {
+    &__intro {
+
+    }
+    &__articles {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: $medium-padding 0;
+      justify-content: space-between;
+    }
+  }
   .article {
     &__container {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      width: 48%;
+      justify-content: space-between;
     }
-    &__image {
-      width: 50%;
+    &__list {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__list-item {
+      border-right: 2px solid $green;
+      margin: 0 auto;
     }
     &__text-container{
+      width: 80%
+    }
+    &__image {
+      width: 80%;
+    }
+  }
+  .article__container:nth-of-type(3n+1) {
+    width: 100%;
+    flex-direction: row;
+    & .article__image {
+      width: 40%;
+    }
+    & .article__text-container{
       width: 40%
     }
   }
