@@ -20,7 +20,7 @@ class Newsletters extends Component {
   }
 
   getPeblioNewsletters() {
-    axios.get('http://localhost:8081/api/newsletters/1')
+    axios.get('https://api.peblio.co/api/newsletters')
       .then((result) => {
         this.setState({
           newsletters: result.data.newsletters,
@@ -36,7 +36,7 @@ class Newsletters extends Component {
 
   }
 
-  getNewsletter=(vol)=> {
+  getNewsletter=(vol) => {
     this.setState({
       newsletter: this.state.newsletters[vol]
     });
@@ -104,36 +104,38 @@ class Newsletters extends Component {
                   Visit Our Website
             </a>
             <div className="newsletter__articles">
-            {
-              this.state.newsletter.articles && this.state.newsletter.articles.map(article => (
-                <div className="article__container">
-                  {article.image && (
-                    <img
-                      className="article__image"
-                      src={article.image}
-                    />
-                  )}
-                  <div className="article__text-container">
-                    <h3 className="article__heading">
-                      {' '}
-                      {article.heading}
-                      {' '}
-                    </h3>
-                    <p className="article__para">
-                      {' '}
-                      {article.para}
-                      {' '}
-                    </p>
-                    <a
-                      className="article__link"
-                      href={article.link}
-                    >
-                      {article.linkText}
-                    </a>
+              {
+                this.state.newsletter.articles && this.state.newsletter.articles.map(article => (
+                  <div className="article__container">
+                    {article.image && (
+                      <img
+                        className="article__image"
+                        src={article.image}
+                      />
+                    )}
+                    <div className="article__text-container">
+                      <h3 className="article__heading">
+                        {' '}
+                        {article.heading}
+                        {' '}
+                      </h3>
+                      <p className="article__para">
+                        {' '}
+                        {article.para}
+                        {' '}
+                      </p>
+                      <a
+                        className="article__link"
+                        href={article.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {article.linkText}
+                      </a>
+                    </div>
                   </div>
-                </div>
-              ))
-            }
+                ))
+              }
             </div>
           </div>
 
