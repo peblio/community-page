@@ -5,7 +5,7 @@
   &__container {
     //TODO : Make it a percentage value so that its responsive
     // height: 80%;
-    height: 400px;
+    height: auto;
     padding-top: 1.5*$large-padding;
     background: $black;
     width: 100%;
@@ -16,14 +16,14 @@
   }
   &__slider-container {
     display: flex;
-    width: 80%;
+    width: 100%;
     justify-content: center;
     align-items: center;
   }
   &__slider {
     width: 100%;
     display: flex !important;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-around;
     align-items: center;
   }
@@ -32,24 +32,28 @@
     font-family: $primary-font;
     color: $white;
     font-size: $hero-heading-font-2;
-    text-align: left;
+    text-align: center;
     letter-spacing: 2px;
     margin: 0;
-  }
+    &-desktop{
+      display: none;
+    }
+  } 
   &__content {
     margin:0;
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
   &__image {
     margin:0;
-    width: 40%;
+    width: 90%;
   }
   &__text {
     text-align: left;
     font-size: $medium-font;
+    padding: $medium-padding;
   }
   &__button {
     margin: 0 $medium-margin 0 0;
@@ -72,7 +76,7 @@
 
 .hero-menu {
   &__list {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
@@ -122,12 +126,51 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  // .hero__container {
-  //   flex-direction: row;
-  // }
+@media only screen and (min-width: 768px) {
+  .hero-menu {
+    &__list {
+      display: flex;
+    }
+  }
+  .hero {
+    &__container {
+      height: 400px;
+    }
+    &__text {
+      padding: 0;
+    }
+    &__heading {
+      text-align: left;
+      &-mobile{
+        display: none;
+      }
+      &-desktop{
+        display: block;
+      }
+    }
+    &__slider-container {
+      width: 80%;
+    }
+    &__slider {
+      flex-direction: row;
+    }
+    &__content {
+      margin:0;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__image {
+      margin:0;
+      width: 40%;
+    }
+  }
+  
 }
+
 .slick-list, .slick-slider, .slick-track {
+  // padding: $small-padding;
   display: flex;
   align-items: center;
 }

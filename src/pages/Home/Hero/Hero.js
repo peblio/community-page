@@ -72,7 +72,7 @@ class Hero extends Component {
             {this.state.content.map((content, i) => (
               <div className="hero__slider">
                 <div className="hero__content">
-                  <h1 className="hero__heading">
+                  <h1 className="hero__heading hero__heading-desktop">
                     {content.heading}
                   </h1>
                   <p className="hero__text">
@@ -86,6 +86,9 @@ class Hero extends Component {
                   className="hero__image"
                   src={content.image}
                 />
+                <h1 className="hero__heading hero__heading-mobile">
+                  {content.heading}
+                </h1>
               </div>
             ))}
           </Slider>
