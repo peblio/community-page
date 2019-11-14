@@ -11,6 +11,7 @@ import * as serviceWorker from './utils/serviceWorker';
 import About from './pages/About/About.js';
 import Home from './pages/Home/Home';
 import HourOfCode from './pages/HourOfCode/HourOfCode';
+import Newsletters from './pages/Newsletters/Newsletters';
 import Privacy from './pages/Privacy/Privacy';
 import Studio from './pages/Studio/Studio.js';
 import Terms from './pages/Terms/Terms';
@@ -38,6 +39,7 @@ ReactDOM.render(
           <Route path="/privacy-policy" component={Privacy} />
           <Route path="/studio/:tag" component={Studio} />
           <Route path="/hour-of-code" component={HourOfCode} />
+          <Route path="/newsletters" component={Newsletters} />
         </Switch>
       </div>
     </Router>
