@@ -330,6 +330,10 @@ module.exports = function (webpackEnv) {
         {
           test: /\.(png|jpg|gif)$/,
           use: ['url-loader']
+        },
+        {
+          test: /\.json$/,
+          use: ['json-loader']
         }
       ]
     },
