@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+
+.sign-up__container {
+    color: $grey;
+    width: 100%;;
+    & .ctct-gdpr-text {
+        display: none;
+    }
+    & .ctct-form-footer {
+        display: none;
+    }
+    & #email_address_label_0 {
+        display: none;
+    }
+    & .ctct-form-custom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 0 !important;
+        margin: 0 !important;
+    }
+    
+    & .ctct-form-button {
+        display: flex;
+        width: fit-content !important;
+        height: fit-content;
+        background: $black !important;
+        margin-top: 1rem;
+    }
+    & .ctct-form-element {
+        min-width: 300px;
+    }
+    & .ctct-form-header {
+        font-size: 18px !important;
+    }
+    & .ctct-form-defaults {
+        padding: 1rem !important;
+        min-height: 0 !important;
+        background: $grey !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .sign-up__container {
+        & .ctct-form-custom {
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+        }
+        & .ctct-form-element {
+            margin: 0 1rem;
+        }
+        & .ctct-form-button {
+            margin-top: 0;
+        }
+    }
+}

@@ -55,8 +55,13 @@
     font-size: $medium-font;
     padding: $medium-padding;
   }
+  &__button-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
   &__button {
-    margin: 0 $medium-margin 0 0;
+    margin: 0 $medium-margin 1rem 0;
     padding: $small-padding $medium-padding ;
     border: 2px solid $white;
     border-radius: 5px;
@@ -69,6 +74,15 @@
     &:hover {
       color: $black;
       background-color: $white;
+    } 
+    &--green {
+      background-color: $green;
+      color: $white;
+      border: 2px solid $green;
+      &:hover {
+        color: $green;
+        background-color: $white;
+      } 
     }
   }
 
@@ -163,7 +177,12 @@
     }
     &__image {
       margin:0;
-      width: 40%;
+      width: 350px;
+      height: 350px;
+    }
+    &__button-container {
+      display: flex;
+      flex-direction: row;
     }
   }
   

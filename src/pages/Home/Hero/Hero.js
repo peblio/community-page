@@ -5,9 +5,9 @@ import { bindActionCreators } from 'redux';
 import Slider from 'react-slick';
 // import 'slick-carousel/slick/slick.css';
 // import 'slick-carousel/slick/slick-theme.css';
-import welcome from '../../../assets/welcome.png';
-import lesson from '../../../assets/lesson.png';
-import curr from '../../../assets/curr.png';
+import welcome from '../../../assets/welcome-01.png';
+import lesson from '../../../assets/lesson-01.png';
+import curr from '../../../assets/curr-01.png';
 
 
 require('./hero.scss');
@@ -78,9 +78,14 @@ class Hero extends Component {
                   <p className="hero__text">
                     {content.text}
                   </p>
-                  <a className="hero__button" href="#">
-                  Learn More
-                  </a>
+                  <div className="hero__button-container">
+                    <a className="hero__button" href="#">
+                    Learn More
+                    </a>
+                    <a className="hero__button hero__button--green" href="#">
+                    Start Creating
+                    </a>
+                  </div>
                 </div>
                 <img
                   className="hero__image"
