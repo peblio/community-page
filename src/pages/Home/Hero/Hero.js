@@ -16,6 +16,7 @@ class Hero extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectedItem: 0,
       content: [
         {
           title: 'Welcome',
@@ -56,10 +57,12 @@ class Hero extends Component {
         <div className="hero-menu__container">
           <ul className="hero-menu__list">
             {this.state.content.map((content, i) => (
-              <li className="hero-menu__list-item">
+              <li className={`hero-menu__list-item ${this.state.selectedItem==i? 'hero-menu__button--selected':''}`}>
                 <button
                   className="hero-menu__button"
-                  onClick={() => { this.slider.slickGoTo(i); }}
+                  onClick={() => { 
+                    this.setState({selectedItem: i})
+                    this.slider.slickGoTo(i); }}
                 >
                   {content.title}
                 </button>

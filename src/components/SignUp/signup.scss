@@ -25,7 +25,6 @@
         width: fit-content !important;
         height: fit-content;
         background: $black !important;
-        margin-top: 1rem;
     }
     & .ctct-form-element {
         min-width: 300px;
@@ -49,9 +48,6 @@
         }
         & .ctct-form-element {
             margin: 0 1rem;
-        }
-        & .ctct-form-button {
-            margin-top: 0;
         }
     }
 }

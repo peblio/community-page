@@ -94,9 +94,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    & li:not(:last-child) {
-      border-bottom: 2px solid $green;
-    }
+    padding: 0;
   }
   &__list-item {
     width: 100%;
@@ -111,10 +109,17 @@
   }
   &__button {
     background: none;
-    color: $green;
+    color: $white;
     border: none;
     cursor: pointer;
     font-size: $medium-font;
+    padding-left: 3rem;
+    padding-right: 1rem;
+    outline: none;
+    &--selected {
+      background: $transgreen;
+      color: $green;
+    }
   }
 }
 
