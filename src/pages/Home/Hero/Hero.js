@@ -22,19 +22,21 @@ class Hero extends Component {
           title: 'Welcome',
           heading: 'Teach coding with confidence',
           text: "Whether you're a CS teacher, or want to bring code to your class, we'll provide the tools and resources you need to teach 21st century skills in your classroom.",
-          image: welcome
+          image: welcome,
         },
         {
           title: 'New Curriculum',
           heading: 'Teach Creative Coding in p5.js!',
           text: 'Check out this curriculum developed by the NYC Department of education and learn to code by creating graphics and games for the web with this exciting Javascript library.',
-          image: curr
+          image: curr,
+          link: "https://demo.peblio.co/pebl/"
         },
         {
           title: 'New Lessons',
           heading: 'Physics and Code!',
           text: 'Bring code to your physics class with these lessons developed by STEM coding. STEM coding uses the p5.js library to create engaging physics lessons with cool simulations!',
-          image: lesson
+          image: lesson,
+          link: "https://demo.peblio.co/profile/stemcoding/folder/rkhHW1iXH"
         }
       ]
     };
@@ -82,10 +84,22 @@ class Hero extends Component {
                     {content.text}
                   </p>
                   <div className="hero__button-container">
-                    <a className="hero__button" href="#">
-                    Learn More
-                    </a>
-                    <a className="hero__button hero__button--green" href="#">
+                    {content.link && (
+                      <a 
+                        className="hero__button" 
+                        href={content.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                      Learn More
+                      </a>
+                    )}
+                    <a 
+                      className="hero__button hero__button--green" 
+                      href="https://demo.peblio.co"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                     Start Creating
                     </a>
                   </div>
