@@ -10,6 +10,7 @@ import Nav from '../../components/Nav/Nav';
 import Pebls from '../../components/Pebls/Pebls';
 import TagInput from '../../components/TagInput/TagInput';
 import Featured from '../../components/Featured/Featured.js';
+import SignUp from '../../components/SignUp/SignUp.js';
 
 require('./home.scss');
 
@@ -22,6 +23,7 @@ class Home extends Component {
             activeMenuItem="home"
           />
           <Hero />
+          <SignUp />
           <TagInput />
           {!this.props.name &&
             <Featured />

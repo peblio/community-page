@@ -3,90 +3,123 @@
 /*TEXT*/
 .hero {
   &__container {
-    height: 80%;
-    padding-top: 150px;
+    //TODO : Make it a percentage value so that its responsive
+    // height: 80%;
+    height: auto;
+    padding-top: 1.5*$large-padding;
     background: $black;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+
+    // align-items: center;
+  }
+  &__slider-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
     align-items: center;
   }
-  &__sub-container {
-    width: 50%;
-    margin-right: 0px;
-    display: inline-block;
-    float: left;
-    margin-bottom: 70px;
-    margin-top:$medium-margin
+  &__slider {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
   }
-  &__header {
+  &__heading {
     display: block;
-    margin-left: $hero-left-margin;
     font-family: $primary-font;
     color: $white;
-    font-size: $hero-heading-font-1;
-    line-height: $hero-heading-line-height;
-    text-align: left;
-    letter-spacing: 2px;
-    width:350px;
-  }
-  &__header-small {
     font-size: $hero-heading-font-2;
-  }
-  &__subheader {
-    display: block;
-    max-width: 500px;
-    margin-left: $hero-left-margin;
-    margin-top: $small-margin;
-    font-family: $secondary-font;
-    color: $white;
-    font-size: $medium-font;
-    line-height: 24px;
-    font-weight: 400;
-    text-align: left;
-
-  }
-  &__button-container{
-    margin-top: $medium-margin;
-    text-align: left;
-    margin-left: $hero-left-margin;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0;
+    &-desktop{
+      display: none;
     }
+  } 
+  &__content {
+    margin:0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__image {
+    margin:0;
+    width: 90%;
+  }
+  &__text {
+    text-align: left;
+    font-size: $medium-font;
+    padding: $medium-padding;
+  }
+  &__button-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
   &__button {
-    width: $button-width;
-    height: $button-height;
-    margin: 0 $medium-margin 0 0;
+    margin: 0 $medium-margin 1rem 0;
     padding: $small-padding $medium-padding ;
-    border: 2px solid $green;
+    border: 2px solid $white;
     border-radius: 5px;
-    background-color: $white;
+    background-color: transparent;
     font-family: $primary-font;
-    color: $green;
+    color: $white;
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
     &:hover {
-      color: $white;
-      background-color: $green;
-    }
-  }
-  &__button-2 {
-    color: $white;
-    background-color: $green;
-    &:hover {
-      color: $green;
+      color: $black;
       background-color: $white;
+    } 
+    &--green {
+      background-color: $green;
+      color: $white;
+      border: 2px solid $green;
+      &:hover {
+        color: $green;
+        background-color: $white;
+      } 
     }
   }
-  &__image{
-    float:right;
+
+}
+
+.hero-menu {
+  &__list {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
   }
-  &__main-image{
-    float: right;
-    max-width: 50%;
-    margin-bottom: -10px;
-  }
-  &__pebl{
+  &__list-item {
     width: 100%;
+    list-style: none;
+    padding: 1rem 0 ;
+    display: flex;
+    justify-content:flex-end;
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+    background: none;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    font-size: $medium-font;
+    padding-left: 3rem;
+    padding-right: 1rem;
+    outline: none;
+    &--selected {
+      background: $transgreen;
+      color: $green;
+    }
   }
 }
 
@@ -112,8 +145,64 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  .hero__container {
-    flex-direction: row;
+@media only screen and (min-width: 768px) {
+  .hero-menu {
+    &__list {
+      display: flex;
+    }
   }
+  .hero {
+    &__container {
+      height: 400px;
+    }
+    &__text {
+      padding: 0;
+    }
+    &__heading {
+      text-align: left;
+      &-mobile{
+        display: none;
+      }
+      &-desktop{
+        display: block;
+      }
+    }
+    &__slider-container {
+      width: 80%;
+    }
+    &__slider {
+      flex-direction: row;
+    }
+    &__content {
+      margin:0;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__image {
+      margin:0;
+      width: 350px;
+      height: 350px;
+    }
+    &__button-container {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  
 }
+
+.slick-list, .slick-slider, .slick-track {
+  // padding: $small-padding;
+  display: flex;
+  align-items: center;
+}
+
+// .slick-slider {
+//   //TODO : make the slider the full width of the carousel
+//   // height: 100%;
+//   width: 100%;
+//   position: absolute;
+//   margin: 0 $large-margin;
+// }
