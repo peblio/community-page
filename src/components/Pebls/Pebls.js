@@ -11,21 +11,25 @@ import Nav from '../Nav/Nav';
 import Pebl from '../Pebl/Pebl';
 
 require('./pebls.scss');
-
+const FIRST_PAGE = 1;
+const PAGE_INCREMENT_COUNT = 1;
+const PAGE_SIZE = 11;
 class Pebls extends Component {
   constructor(props) {
     super(props);
     this.state = {
       pebls: [],
-      page: 1,
-      pageLimit: 11,
+      page: FIRST_PAGE,
+      pageLimit: PAGE_SIZE,
       withStudents: false
     };
   }
 
   componentWillMount() {
     this.setPeblsPermissions();
-    this.retrievePeblsWithTag(this.props.tagName);
+    if (this.props.tagName) {
+      this.retrievePeblsWithTag(this.props.tagName);
+    }
   }
 
   componentWillUpdate(nextProps) {
@@ -37,7 +41,7 @@ class Pebls extends Component {
 
   increasePageCount = () => {
     this.setState({
-      page: this.state.page+1
+      page: this.state.page + PAGE_INCREMENT_COUNT
     })
   }
 
@@ -58,9 +62,6 @@ class Pebls extends Component {
     this.props.setTagName(tag);
     this.props.getPeblsFromTag(tag, this.state.pageLimit, 1,this.state.withStudents);
     this.increasePageCount();
-    this.setState({
-      page: 2
-    })
   }
 
   renderPebls(studioPebls) {
