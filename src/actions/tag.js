@@ -10,13 +10,21 @@ export function setTagName(value) {
   };
 }
 
-export function getPeblsFromTag(value, limit, offset, withStudents) {
-  const url = `https://api.peblio.co/api/pages/withTags?tag=${value}&limit=${limit}&offset=${offset}&showStudentPages=${withStudents}`;
+export function setTotalPebls(value) {
+  return (dispatch) => {
+    dispatch({
+      type: ActionTypes.SET_TOTAL_PEBLS,
+      value
+    });
+  };
+}
+
+export function getPeblsFromTag(value, limit, page, withStudents) {
+  const url = `https://api.peblio.co/api/pages/withTags?tag=${value}&limit=${limit}&page=${page}&showStudentPages=${withStudents}`;
   const tempPebls = [];
   return dispatch => axios.get(url)
     .then((response) => {
       const totalNoPebls = response.data.totalDocs;
-      const checkLimit = (totalNoPebls > limit * (offset + 1)) ? limit : totalNoPebls;
       response.data.docs.map((pebl, i) => {
         tempPebls.push({
           description: pebl.description,
@@ -36,13 +44,4 @@ export function getPeblsFromTag(value, limit, offset, withStudents) {
     .catch((error) => {
       console.log(error);
     });
-}
-
-export function setTotalPebls(value) {
-  return (dispatch) => {
-    dispatch({
-      type: ActionTypes.SET_TOTAL_PEBLS,
-      value
-    });
-  };
 }

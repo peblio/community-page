@@ -11,29 +11,37 @@ import Nav from '../Nav/Nav';
 import Pebl from '../Pebl/Pebl';
 
 require('./pebls.scss');
-
+const FIRST_PAGE = 1;
+const PAGE_INCREMENT_COUNT = 1;
+const PAGE_SIZE = 11;
 class Pebls extends Component {
   constructor(props) {
     super(props);
     this.state = {
       pebls: [],
-      offset: 0,
-      pageLimit:11,
+      page: FIRST_PAGE,
+      pageLimit: PAGE_SIZE,
       withStudents: false
     };
   }
 
-  increasePageOffset = () => {
-    this.setState({
-      offset: this.state.offset+this.state.pageLimit
-    })
+  componentWillMount() {
+    this.setPeblsPermissions();
+    if (this.props.tagName) {
+      this.retrievePeblsWithTag(this.props.tagName);
+    }
   }
-  retrievePeblsWithTag=(tag) =>{
-    this.props.setTagName(tag);
-    this.props.getPeblsFromTag(tag, this.state.pageLimit, 0,this.state.withStudents);
-    this.increasePageOffset();
+
+  componentWillUpdate(nextProps) {
+    if (nextProps.tagName !== this.props.tagName) {
+      const tag = nextProps.tagName;
+      this.retrievePeblsWithTag(tag);
+    }
+  }
+
+  increasePageCount = () => {
     this.setState({
-      offset:this.state.pageLimit
+      page: this.state.page + PAGE_INCREMENT_COUNT
     })
   }
 
@@ -46,22 +54,15 @@ class Pebls extends Component {
   }
 
   fetchMoreData = () => {
-    this.props.getPeblsFromTag(this.props.tagName, this.state.pageLimit, this.state.offset, this.state.withStudents);
-    this.increasePageOffset();
+    this.props.getPeblsFromTag(this.props.tagName, this.state.pageLimit, this.state.page, this.state.withStudents);
+    this.increasePageCount();
   }
 
-  componentWillUpdate(nextProps) {
-    if (nextProps.tagName !== this.props.tagName) {
-      const tag = nextProps.tagName;
-      this.retrievePeblsWithTag(tag);
-    }
+  retrievePeblsWithTag=(tag) =>{
+    this.props.setTagName(tag);
+    this.props.getPeblsFromTag(tag, this.state.pageLimit, 1,this.state.withStudents);
+    this.increasePageCount();
   }
-
-  componentWillMount() {
-    this.setPeblsPermissions();
-    this.retrievePeblsWithTag(this.props.tagName);
-  }
-
 
   renderPebls(studioPebls) {
     return (
