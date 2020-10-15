@@ -15,6 +15,7 @@ import Newsletters from './pages/Newsletters/Newsletters';
 import Privacy from './pages/Privacy/Privacy';
 import Studio from './pages/Studio/Studio.js';
 import Terms from './pages/Terms/Terms';
+import Pricing from './pages/Pricing/Pricing';
 
 import rootReducer from './reducers/rootReducer';
 import history from './utils/history';
@@ -40,6 +41,7 @@ ReactDOM.render(
           <Route path="/studio/:tag" component={Studio} />
           <Route path="/hour-of-code" component={HourOfCode} />
           <Route path="/newsletters" component={Newsletters} />
+          <Route path="/pricing" component={Pricing} />
         </Switch>
       </div>
     </Router>
