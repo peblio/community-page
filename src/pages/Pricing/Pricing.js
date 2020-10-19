@@ -54,7 +54,7 @@ const Pricing = () => (
               <div className="pricing__container__cards-section__card__plan__details">
                 Billed at $144/year
                 <br />
-                (you’re saving $84 with an annual plan ) 
+                (you’re saving $84 with an annual plan )
                 <div style={{ color: '#D8D8D8', marginTop: '14px' }}>
                   switch to annual billing
                 </div>
