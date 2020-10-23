@@ -22,7 +22,7 @@ const Pricing = () => (
             planPricing="$0"
             planDetails="forever"
             onClick={() => {
-              console.log('Sign Up');
+              window.location.href = 'https://demo.peblio.co/pricing/signup';
             }}
             featureList={[
               'Unlimited public Pebls',
@@ -53,7 +53,7 @@ const Pricing = () => (
               </div>
             )}
             onClick={() => {
-              console.log('Sign Up');
+              window.location.href = 'https://demo.peblio.co/pricing/signup';
             }}
             featureList={[
               'Everything in Free',
@@ -63,6 +63,10 @@ const Pricing = () => (
             ]}
             backdropColor="rgba(152, 0, 118, 0.2)"
           />
+        </div>
+        <div className="pricing__container__login">
+          Already have an account?
+          <a href="https://demo.peblio.co/pricing/login">Log in</a>
         </div>
       </div>
     </div>
